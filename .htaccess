@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteRule ^$ http://127.0.0.1:50000/ [P,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ http://127.0.0.1:50000/$1 [P,L]
+
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/titanioh/cryptar"
+PassengerBaseURI "/cryptar"
+PassengerNodejs "/home/titanioh/nodevenv/cryptar/8/bin/node"
+PassengerAppType node
+PassengerStartupFile index.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
