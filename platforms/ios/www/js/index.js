@@ -60,6 +60,8 @@ function loginSecond(cifradoEnc, clave){
 					window.localStorage.setItem('key', data.key);
 					window.localStorage.setItem('keyBF', data.keyBF);
 					window.localStorage.setItem('keyBF', data.keyBF);
+					window.localStorage.setItem('fecha_desde', data.fecha_desde);
+					window.localStorage.setItem('fecha_hasta', data.fecha_hasta);
 					window.localStorage.setItem("claves"+data.usuario.username, JSON.stringify(data.usuario));
 					window.location.href="./inicio.html";
 				}catch(err){

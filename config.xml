@@ -58,7 +58,7 @@
     <preference name="iosPersistentFileLocation" value="Library" />
     <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
     <preference name="exit-on-suspend" value="false" />
-	<preference name="KeyboardShrinksView" value="true" /> 
+    <preference name="KeyboardShrinksView" value="true" />
     <feature name="http://api.phonegap.com/1.0/network" />
     <feature name="http://api.phonegap.com/1.0/device" />
     <feature name="http://api.phonegap.com/1.0/camera" />

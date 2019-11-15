@@ -1,8 +1,9 @@
 // Initialize app
-var socket, username, pictureSource, destinationType, myMessages, modeloUUID, myMessagebar, innerH;
+var socket, username, pictureSource, destinationType, myMessages, modeloUUID, myMessagebar, innerH, fechaDesde, fechaHasta;
 var propietario = "Sin identificar";
 var myApp = new Framework7({
-    pushState: true
+    pushState: true,
+    swipeBackPage: false
 });
 
 var mostrardia = false;
@@ -48,6 +49,14 @@ $(function() {
 
         today = dd + '-' + mm + '-' + yyyy + ' ' + hours + ':' + min;
         return today;
+    }
+
+    function dateFromString(string) {
+        var fechaErronea = string.split(" ")[0];
+        var hora = string.split(" ")[1];
+        var arrFecha = fechaErronea.split("-");
+        var fechaCorrecta = arrFecha[2] + "/" + arrFecha[1] + "/" + arrFecha[0] + " " + hora;
+        return fechaCorrecta;
     }
 
     function addParticipantsMessage(data) {
@@ -178,6 +187,15 @@ $(function() {
     // Whenever the server emits 'new message', update the chat body
     socket.on('new message', function(data, callback) {
         obj = JSON.parse(data);
+
+        var dateFrom = new Date(fechaDesde);
+        var dateTo = new Date(fechaHasta);
+        var msgDate = new Date(dateFromString(obj.fecha+":00"));
+
+        if(dateFrom > msgDate || msgDate > dateTo){
+            return false;
+        }
+
         if (obj.tipo === 'texto') {
             if (usuarioactual != "") {
                 clase = "." + usuarioactual;
@@ -386,13 +404,16 @@ $(function() {
     }
 
     function onDeviceReady() {
-        innerH = window.innerHeight;
-		if(Keyboard){
-			Keyboard.shrinkView(true);
-		}
-		if(window.Keyboard){
-			window.Keyboard.shrinkView(true);
-		}
+        try{
+            if(window.Keyboard){
+                window.Keyboard.shrinkView(true);
+            }
+            if(Keyboard){
+                Keyboard.shrinkView(true);
+            }
+        }catch (e) {
+            console.log(e.message)
+        }
         $('.spinner').addClass('hidden');
         var isLogged = window.localStorage.getItem('isLogged');
         if (isLogged === 'undefined' || isLogged === false || isLogged === null) {
@@ -400,6 +421,10 @@ $(function() {
         } else {
             nombreUsuario = window.localStorage.getItem('nombreUsuario');
             usuarios = JSON.parse(window.localStorage.getItem('usuarios'));
+
+            fechaDesde = window.localStorage.getItem('fecha_desde');
+            fechaHasta = window.localStorage.getItem('fecha_hasta');
+
             for (var i = 0; i < usuarios.length; i++) {
                 $("#usuarios").append('<li id="' + usuarios[i].username + '">' +
                   '<a href="messages.html?mac=' + usuarios[i].username + '&apellidonombre=' + usuarios[i].apellidonombre + '" class="item-link item-content">' +
@@ -412,7 +437,7 @@ $(function() {
                   '</li>');
             }
 
-            $("#nombreUsuario").html(nombreUsuario);
+            $("#nombreUsuario").html(nombreUsuario).change();
 
             document.addEventListener("backbutton", stopEvent, false);
             document.addEventListener("volumedownbutton", stopEvent, false);
@@ -435,23 +460,26 @@ $(function() {
             modeloUUID = device.model + '' + device.uuid;
         }
 
-        // try {
-        // window.FirebasePlugin.getToken(function(token) {
-        // window.localStorage.setItem('token', token);
-        // }, function(error) {
-        // window.localStorage.setItem('token', null);
-        // });
-        // window.FirebasePlugin.onTokenRefresh(function(token) {
-        // window.localStorage.setItem('token', token);
-        // }, function(error) {
-        // window.localStorage.setItem('token', null);
-        // });
-        // window.FirebasePlugin.onNotificationOpen(function(notification) {
-        // console.log(notification);
-        // }, function(error) {
-        // console.error(error);
-        // });
-        // } catch (err) {}
+        try {
+            window.FirebasePlugin.getToken(function(token) {
+                window.localStorage.setItem('token', token);
+                console.log(token);
+            }, function(error) {
+                window.localStorage.setItem('token', null);
+            });
+            window.FirebasePlugin.onTokenRefresh(function(token) {
+                window.localStorage.setItem('token', token);
+            }, function(error) {
+                window.localStorage.setItem('token', null);
+            });
+            window.FirebasePlugin.onNotificationOpen(function(notification) {
+                console.log(notification);
+            }, function(error) {
+                console.log(error);
+            });
+        } catch (err) {
+            console.log(err.message);
+        }
 
         $('.spinner').addClass('hidden');
     }
@@ -547,6 +575,9 @@ $(function() {
         $(".navbar").css({"position": "fixed", "top": actualH+"px"});
     }
 
+    myApp.onPageInit('index', function () {
+        $("#toolbar-navigation").removeClass('hidden');
+    });
 
     myApp.onPageInit('messages', function(page) {
         usuarioactual = page.query.mac;
@@ -646,6 +677,14 @@ $(function() {
                 }
             }
 
+            var dateFrom = new Date(fechaDesde);
+            var dateTo = new Date(fechaHasta);
+            var msgDate = new Date(dateFromString(field.fecha+":00"));
+
+            if(dateFrom > msgDate || msgDate > dateTo){
+                return true;
+            }
+
             var propietariomsj = field.propietario;
             objetoClaves = {
                 key: window.localStorage.getItem("key"),
@@ -653,11 +692,12 @@ $(function() {
                 iv: field.iv
             };
             var mensaje = deCryptar(field.mensaje, objetoClaves);
+            var type;
 
             if (propietario === propietariomsj) {
-                var type = 'sent';
+                type = 'sent';
             } else {
-                var type = 'received';
+                type = 'received';
             }
             if (mensaje.tipo === "imagen") {
                 addMessage("<strong>IMAGEN ENVIADA</strong>", propietariomsj, type, field.fecha);
@@ -904,12 +944,6 @@ function salir() {
 }
 
 function reconfigurar() {
-    confirm("Esta seguro que desea re-configurar los hosts?", callbackConfirm);
-    // navigator.notification.confirm("Esta seguro que desea re-configurar los hosts?", callbackConfirm);
+    window.location.href = "./cargarhosts.html";
 }
 
-function callbackConfirm(results) {
-    if (results === 1) {
-        window.location.href = "./cargarhosts.html";
-    }
-}
