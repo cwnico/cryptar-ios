@@ -374,6 +374,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "runs": true
     },
     {
+      "id": "cordova-plugin-firebase.FirebasePlugin",
+      "file": "plugins/cordova-plugin-firebase/www/firebase.js",
+      "pluginId": "cordova-plugin-firebase",
+      "clobbers": [
+        "FirebasePlugin"
+      ]
+    },
+    {
       "id": "cordova-plugin-globalization.GlobalizationError",
       "file": "plugins/cordova-plugin-globalization/www/GlobalizationError.js",
       "pluginId": "cordova-plugin-globalization",
@@ -522,6 +530,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-device-orientation": "1.0.7",
     "cordova-plugin-dialogs": "2.0.2",
     "cordova-plugin-file": "4.1.1",
+    "cordova-plugin-firebase": "2.0.5",
     "cordova-plugin-globalization": "1.0.9",
     "cordova-plugin-inappbrowser": "1.3.0",
     "cordova-plugin-keyboard": "1.2.0",
