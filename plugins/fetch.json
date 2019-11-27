@@ -1,12 +1,4 @@
 {
-  "cordova-plugin-battery-status": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-battery-status@~1.1.1"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-camera": {
     "source": {
       "type": "registry",
@@ -41,14 +33,6 @@
       "id": "cordova-plugin-compat@^1.0.0"
     },
     "is_top_level": false,
-    "variables": {}
-  },
-  "cordova-plugin-console": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-console@~1.0.2"
-    },
-    "is_top_level": true,
     "variables": {}
   },
   "cordova-plugin-contacts": {
@@ -159,6 +143,14 @@
     "source": {
       "type": "registry",
       "id": "pushbots-cordova-plugin"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-console": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-console"
     },
     "is_top_level": true,
     "variables": {}
