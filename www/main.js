@@ -491,16 +491,6 @@ $(function() {
       console.log(err.message);
     }
 
-    try{
-		window.plugins.PushbotsPlugin.initialize("5dd8234b9cb2c20ff10d9b55", {"android":{"sender_id":"GOOGLE_SENDER_ID"}});
-		window.plugins.PushbotsPlugin.on("registered", function(token){
-			window.localStorage.setItem('token', token);			
-			console.log("Registration Id:" + token);
-		});
-    }catch (e) {
-      console.log(e.message)
-    }
-
     $('.spinner').addClass('hidden');
   }
 
