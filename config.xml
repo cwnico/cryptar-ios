@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.cryptar.titanio" version="7.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.titanio.cryptar" version="8.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Cryptar Chat</name>
     <description>
 		Cryptar - by Sistemas Titanio
@@ -7,6 +7,9 @@
     <author email="info@sistemastitanio.com.ar" href="http://sistemastitanio.com.ar">
         Sistemas Titanio
     </author>
+    <preference name="android-minSdkVersion" value="19" />
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="phonegap-version" value="cli-8.1.1" />
     <content src="index.html" />
     <preference name="prerendered-icon" value="true" />
     <platform name="ios">
@@ -93,4 +96,5 @@
     <plugin name="cordova-plugin-whitelist" spec="^1.3.4" />
     <plugin name="cordova-plugin-dialogs" spec="^2.0.2" />
     <plugin name="cordova-plugin-keyboard" spec="1.2.0" />
+    <plugin name="pushbots-cordova-plugin" spec="^1.6.14" />
 </widget>

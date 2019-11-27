@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Cryptar Chat",
+  "short_name": "Cryptar Chat",
+  "version": "com.titanio.cryptar",
+  "description": "Cryptar - by Sistemas Titanio",
+  "author": "Sistemas Titanio",
+  "icons": [],
+  "start_url": "index.html"
+}

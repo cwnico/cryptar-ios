@@ -155,10 +155,10 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-firebase": {
+  "pushbots-cordova-plugin": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-firebase"
+      "id": "pushbots-cordova-plugin"
     },
     "is_top_level": true,
     "variables": {}
