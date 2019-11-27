@@ -38,12 +38,6 @@
         <access origin="https://cryptar.com.ar/*" />
         <access origin="http://localhost/*" />
         <access origin="*" />
-        <edit-config file="*-Info.plist" mode="merge" target="UIStatusBarHidden">
-            <true />
-        </edit-config>
-        <edit-config file="*-Info.plist" mode="merge" target="UIViewControllerBasedStatusBarAppearance">
-            <false />
-        </edit-config>
     </platform>
     <allow-navigation href="http://*" />
     <allow-navigation href="https://*" />

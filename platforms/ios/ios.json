@@ -5,56 +5,6 @@
   },
   "config_munge": {
     "files": {
-      "*-Info.plist": {
-        "parents": {
-          "UIStatusBarHidden": [
-            {
-              "xml": "<true />",
-              "count": 1,
-              "mode": "merge",
-              "id": "config.xml"
-            }
-          ],
-          "UIViewControllerBasedStatusBarAppearance": [
-            {
-              "xml": "<false />",
-              "count": 1,
-              "mode": "merge",
-              "id": "config.xml"
-            }
-          ],
-          "NSLocationWhenInUseUsageDescription": [
-            {
-              "xml": "<string />",
-              "count": 1
-            }
-          ],
-          "NSCameraUsageDescription": [
-            {
-              "xml": "<string> </string>",
-              "count": 1
-            }
-          ],
-          "NSMicrophoneUsageDescription": [
-            {
-              "xml": "<string> </string>",
-              "count": 1
-            }
-          ],
-          "NSPhotoLibraryUsageDescription": [
-            {
-              "xml": "<string> </string>",
-              "count": 1
-            }
-          ],
-          "UIBackgroundModes": [
-            {
-              "xml": "<array><string>remote-notification</string></array>",
-              "count": 1
-            }
-          ]
-        }
-      },
       "config.xml": {
         "parents": {
           "/*": [
@@ -128,6 +78,40 @@
             },
             {
               "xml": "<feature name=\"PushbotsPlugin\"><param name=\"ios-package\" value=\"PushbotsPlugin\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "*-Info.plist": {
+        "parents": {
+          "NSLocationWhenInUseUsageDescription": [
+            {
+              "xml": "<string />",
+              "count": 1
+            }
+          ],
+          "NSCameraUsageDescription": [
+            {
+              "xml": "<string> </string>",
+              "count": 1
+            }
+          ],
+          "NSMicrophoneUsageDescription": [
+            {
+              "xml": "<string> </string>",
+              "count": 1
+            }
+          ],
+          "NSPhotoLibraryUsageDescription": [
+            {
+              "xml": "<string> </string>",
+              "count": 1
+            }
+          ],
+          "UIBackgroundModes": [
+            {
+              "xml": "<array><string>remote-notification</string></array>",
               "count": 1
             }
           ]

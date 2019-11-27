@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>724144400703-kg64rds685t0qujivu0pqtf436ejlsq4.apps.googleusercontent.com</string>
+	<string>724144400703-mmo411m8rps860nl0hg2oks2hi5j2fp9.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.724144400703-kg64rds685t0qujivu0pqtf436ejlsq4</string>
+	<string>com.googleusercontent.apps.724144400703-mmo411m8rps860nl0hg2oks2hi5j2fp9</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBjtX60DXJLrCMljuFfdyL-BAtlGY9H3oE</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.titanio.cryptar</string>
+	<string>com.cryptar.titanio</string>
 	<key>PROJECT_ID</key>
 	<string>cryptar-chat</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:724144400703:ios:84bbea54d1be4b94ab4b8a</string>
+	<string>1:724144400703:ios:7e3c9b6c6c282c10ab4b8a</string>
 	<key>DATABASE_URL</key>
 	<string>https://cryptar-chat.firebaseio.com</string>
 </dict>

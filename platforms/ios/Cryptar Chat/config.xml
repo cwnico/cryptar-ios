@@ -107,12 +107,6 @@
     <access origin="https://cryptar.com.ar/*" />
     <access origin="http://localhost/*" />
     <access origin="*" />
-    <edit-config file="*-Info.plist" mode="merge" target="UIStatusBarHidden">
-        <true />
-    </edit-config>
-    <edit-config file="*-Info.plist" mode="merge" target="UIViewControllerBasedStatusBarAppearance">
-        <false />
-    </edit-config>
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="BackupWebStorage" value="cloud" />
     <preference name="DisallowOverscroll" value="false" />
