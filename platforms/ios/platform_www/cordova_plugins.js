@@ -485,6 +485,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
         "navigator.notification",
         "navigator"
       ]
+    },
+    {
+      "id": "pushbots-cordova-plugin.PushbotsPlugin",
+      "file": "plugins/pushbots-cordova-plugin/www/pushbots.js",
+      "pluginId": "pushbots-cordova-plugin",
+      "clobbers": [
+        "PushbotsPlugin"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -504,6 +512,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-prevent-screenshot": "1.0.0",
     "cordova-plugin-statusbar": "2.1.3",
     "cordova-plugin-vibration": "2.1.6",
-    "cordova-plugin-whitelist": "1.3.4"
+    "cordova-plugin-whitelist": "1.3.4",
+    "pushbots-cordova-plugin": "1.6.14"
   };
 });
