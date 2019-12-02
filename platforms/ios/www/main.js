@@ -475,8 +475,11 @@ $(function() {
       window.plugins.PushbotsPlugin.on("registered", function(token){
         window.localStorage.setItem('token', token);
       });
+      window.plugins.PushbotsPlugin.on("user:ids", function(data){
+        window.localStorage.setItem('token', data.token);
+      })
     } catch (err) {
-      window.localStorage.setItem('token', err.message);
+    //  window.localStorage.setItem('token', err.message);
     }
 
     $('.spinner').addClass('hidden');
