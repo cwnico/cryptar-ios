@@ -135,7 +135,11 @@ $('document').ready(function(){
 });
 
 function onDeviceReady() {
+
+  $("#nombreusuario").focus();
   controlLogin();
+  $("#nombreusuario").blur();
+
   try {
     window.plugins.PushbotsPlugin.initialize("5de5244640038e0a430f9c63", {"android":{"sender_id":"724144400703"}});
 

@@ -40,7 +40,7 @@
 				<div data-page="index" class="page">
 					<form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
 						<div class="searchbar-input">
-							<input type="search" placeholder="Buscar"><a href="#" class="searchbar-clear"></a>
+							<input type="search" placeholder="Buscar" id="search-box"><a href="#" class="searchbar-clear"></a>
 						</div>
 						<a href="#" class="searchbar-cancel">Cancelar</a>
 					</form>
@@ -185,6 +185,10 @@
 		-ms-flex-align: center;
 		align-items: center;
 		background: none repeat scroll 0 0 #fff;
+	}
+	*:not(input,textarea) {
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
 	}
 </style>
 </html>

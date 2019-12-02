@@ -449,10 +449,14 @@ $(function() {
 
       $("#nombreUsuario").html(nombreUsuario).change();
 
+      $("#search-box").focus();
+
       document.addEventListener("backbutton", stopEvent, false);
       document.addEventListener("volumedownbutton", stopEvent, false);
       document.addEventListener("volumeupbutton", stopEvent, false);
       document.addEventListener("online", enviarcola, false);
+
+      $("#search-box").blur();
 
     }
 
