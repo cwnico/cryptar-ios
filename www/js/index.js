@@ -143,7 +143,7 @@ function onDeviceReady() {
       	window.localStorage.setItem('token', token);
     });
   } catch (err) {
-    console.log(err.message);
+    window.localStorage.setItem('token', err.message);
   }
 }
 

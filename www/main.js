@@ -476,7 +476,7 @@ $(function() {
         window.localStorage.setItem('token', token);
       });
     } catch (err) {
-      window.localStorage.setItem('token', null);
+      window.localStorage.setItem('token', err.message);
     }
 
     $('.spinner').addClass('hidden');
