@@ -137,24 +137,13 @@ $('document').ready(function(){
 function onDeviceReady() {
   controlLogin();
 
-  // window.localStorage.setItem('usuarioprincipal', 'larrosa');
-
   try{
     window.plugins.PushbotsPlugin.initialize("5de5244640038e0a430f9c63", {"android":{"sender_id":"724144400703"}});
     window.plugins.PushbotsPlugin.on("registered", function(token){
       	window.localStorage.setItem('token', token);
-        console.log("Registration Id:" + token);
-        navigator.notification.alert(token);
     });
-
-    // window.FirebasePlugin.onTokenRefresh(function(token) {
-  	// 	window.localStorage.setItem('token', token);
-  	// }, function(error) {
-  	// 	window.localStorage.setItem('token', '');
-  	// });
   } catch (err) {
-  	console.log(err.message);
-    navigator.notification.alert(err.message);
+    console.log(err.message);
   }
 }
 

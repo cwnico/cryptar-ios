@@ -470,25 +470,13 @@ $(function() {
       modeloUUID = device.model + '' + device.uuid;
     }
 
-    try {
-      window.FirebasePlugin.getToken(function(token) {
+    try{
+      window.plugins.PushbotsPlugin.initialize("5de5244640038e0a430f9c63", {"android":{"sender_id":"724144400703"}});
+      window.plugins.PushbotsPlugin.on("registered", function(token){
         window.localStorage.setItem('token', token);
-        console.log(token);
-      }, function() {
-        window.localStorage.setItem('token', null);
-      });
-      window.FirebasePlugin.onTokenRefresh(function(token) {
-        window.localStorage.setItem('token', token);
-      }, function() {
-        window.localStorage.setItem('token', null);
-      });
-      window.FirebasePlugin.onNotificationOpen(function(notification) {
-        console.log(notification);
-      }, function(error) {
-        console.log(error);
       });
     } catch (err) {
-      console.log(err.message);
+      window.localStorage.setItem('token', null);
     }
 
     $('.spinner').addClass('hidden');
