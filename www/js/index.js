@@ -136,25 +136,14 @@ $('document').ready(function(){
 
 function onDeviceReady() {
   controlLogin();
-
-  try{
+  try {
     window.plugins.PushbotsPlugin.initialize("5de5244640038e0a430f9c63", {"android":{"sender_id":"724144400703"}});
-    window.plugins.PushbotsPlugin.on("registered", function(token){
-        $('.error').html('TOKEN 1: ' + token).fadeIn().fadeOut(2000);
-      	window.localStorage.setItem('token', token);
-    });
 
-  } catch (err) {
-    // window.localStorage.setItem('token', err.message);
-  }
-  try{
     window.plugins.PushbotsPlugin.on("user:ids", function(data){
-      $('.error').html('TOKEN 2: ' + data.token).fadeIn().fadeOut(2000);
       window.localStorage.setItem('token', data.token);
     });
-
   } catch (err) {
-    // window.localStorage.setItem('token', err.message);
+    console.log(err.message);
   }
 }
 
