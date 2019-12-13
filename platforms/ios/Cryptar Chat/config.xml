@@ -128,6 +128,7 @@
     <preference name="android-minSdkVersion" value="19" />
     <preference name="android-build-tool" value="gradle" />
     <preference name="phonegap-version" value="cli-8.1.1" />
+    <preference name="StatusBarBackgroundColor" value="#f7f7f8" />
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
     <preference name="iosPersistentFileLocation" value="Library" />
     <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />

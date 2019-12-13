@@ -1,11 +1,13 @@
+"use strict";
+
 var host = window.localStorage.getItem('host');
 var device;
 var uuid;
 
 function controlhost(){
   host = window.localStorage.getItem('host');
-  if(host === null || host === "false"){
-    window.localStorage.setItem('host', false);
+  if(host === null || host === 'false'){
+    window.localStorage.setItem('host', 'false');
     window.location.href="./cargarhosts.html";
   }
   host = window.localStorage.getItem('host');
@@ -13,7 +15,7 @@ function controlhost(){
 
 function controlLogin() {
   var isLogged = window.localStorage.getItem('isLogged');
-  if(isLogged === 'undefined' || isLogged === "false" || isLogged === null){
+  if(isLogged === 'undefined' || isLogged === false || isLogged === null){
   }else{
     var nombreUsuario = window.localStorage.getItem('nombreUsuario') ? window.localStorage.getItem('nombreUsuario') : '';
     var claveUsuario = window.localStorage.getItem('claveUsuario') ? window.localStorage.getItem('claveUsuario') : '';
@@ -133,12 +135,8 @@ function login(){
 $('document').ready(function(){
   controlhost();
 });
-
 function onDeviceReady() {
-
-  $("#nombreusuario").focus();
   controlLogin();
-  $("#nombreusuario").blur();
 
   try {
     window.plugins.PushbotsPlugin.initialize("5de5244640038e0a430f9c63", {"android":{"sender_id":"724144400703"}});
@@ -150,6 +148,5 @@ function onDeviceReady() {
     console.log(err.message);
   }
 }
-
 document.addEventListener("deviceready", onDeviceReady, false);
 

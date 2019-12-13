@@ -66,9 +66,7 @@
       "cordova-plugin-console": {},
       "pushbots-cordova-plugin": {}
     },
-    "platforms": [
-      "ios"
-    ]
+    "platforms": []
   },
   "devDependencies": {
     "xcode": "^2.0.0"
