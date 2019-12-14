@@ -900,7 +900,7 @@ html.android .page-from-center-to-right:before {
 }
 .navbar,
 .toolbar {
-  height: 55px;
+  height: 65px;
   width: 100%;
   box-sizing: border-box;
   font-size: 17px;
@@ -927,7 +927,7 @@ html.ios-gt-8 .toolbar b {
 .toolbar a.link,
 .subnavbar a.link {
   line-height: 54px;
-  height: 54px;
+  height: 64px;
   text-decoration: none;
   position: relative;
   display: -webkit-box;
@@ -1747,10 +1747,10 @@ html:not(.watch-active-state) .searchbar.searchbar-active .searchbar-cancel:acti
   border-radius: 1em;
   box-shadow: none;
   display: block;
-  padding: 4px 8px;
+  padding: 9px 8px;
   margin: 0;
   width: 100%;
-  height: 35px;
+  height: 2.4em;
   color: #000;
   font-size: 17px;
   line-height: 20px;
@@ -4477,7 +4477,7 @@ html.ios-gt-8 .messages-date {
   padding: 6px 16px 9px;
   min-width: 48px;
   min-height: 35px;
-  font-size: 17px;
+  font-size: 1.2em;
   line-height: 1.2;
   word-break: break-word;
 }
@@ -4550,11 +4550,11 @@ html.ios-gt-8 .messages-date {
   margin-right: 34px;
 }
 .message-sent .message-text {
-  padding-right: 22px;
+  padding-right: 1em;
   background-color: #00d449;
   color: white;
   margin-left: auto;
-  -webkit-mask-box-image: url("data:image/svg+xml;charset=utf-8,<svg height='35' viewBox='0 0 96 70' width='48' xmlns='http://www.w3.org/2000/svg'><path d='m84 35c1 7-5 37-42 35-37 2-43-28-42-35-1-7 5-37 42-35 37-2 43 28 42 35z'/></svg>") 50% 56% 46% 42%;
+  /*-webkit-mask-box-image: url("data:image/svg+xml;charset=utf-8,<svg height='35' viewBox='0 0 96 70' width='48' xmlns='http://www.w3.org/2000/svg'><path d='m84 35c1 7-5 37-42 35-37 2-43-28-42-35-1-7 5-37 42-35 37-2 43 28 42 35z'/></svg>") 50% 56% 46% 42%;*/
 }
 .message-sent.message-last .message-text,
 .message-sent.message-with-tail .message-text {

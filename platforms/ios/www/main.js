@@ -1,5 +1,3 @@
-"use strict";
-
 // Initialize app
 var socket, username, pictureSource, destinationType, myMessages, modeloUUID, myMessagebar, innerH, fechaDesde, fechaHasta;
 var propietario = "Sin identificar";
@@ -80,10 +78,10 @@ $(function() {
   }
 
   function enviarcola() {
-    var colasalidastr = window.localStorage.getItem("colasalida");
+    colasalidastr = window.localStorage.getItem("colasalida");
     if (colasalidastr !== '') {
-      var colasalida = JSON.parse(colasalidastr);
-      var colatemp = colasalida;
+      colasalida = JSON.parse(colasalidastr);
+      colatemp = colasalida;
       colasalida = [];
       window.localStorage.setItem("colasalida", JSON.stringify(colasalida));
       $.each(colatemp, function(index, value) {
@@ -98,7 +96,7 @@ $(function() {
     var message = mensaje;
     propietario = window.localStorage.getItem('nombreUsuario');
     if (message && socket.connected) {
-      var datosenvio = {
+      datosenvio = {
         username: username,
         tipo: "texto",
         message: message,
@@ -111,21 +109,21 @@ $(function() {
       };
 
       // TODO: Reenviar mensajes en cola de espera. Aca solo se guardan.
-      var colasalidastr = window.localStorage.getItem("colasalida");
+      colasalidastr = window.localStorage.getItem("colasalida");
       if (colasalidastr === '') {
-        var  colasalida = [];
+        colasalida = [];
       } else {
-        var  colasalida = JSON.parse(colasalidastr);
+        colasalida = JSON.parse(colasalidastr);
       }
 
       colasalida.push(datosenvio);
-      var colastr = JSON.stringify(colasalida);
+      colastr = JSON.stringify(colasalida);
       window.localStorage.setItem("colasalida", colastr);
 
       try {
         socket.emit('new message', JSON.stringify(datosenvio), function(response) {
           var user = $('.messages > div:last-child > .message-name').html();
-          var objResponse = JSON.parse(response);
+          objResponse = JSON.parse(response);
           if (objResponse.estado === "ok" && user === propietario) {
             $('.message-sent:last-child  > .message-label').html(objResponse.mensaje);
             colasalidastr = window.localStorage.getItem("colasalida");
@@ -180,7 +178,7 @@ $(function() {
     var message = mensaje;
     propietario = window.localStorage.getItem('nombreUsuario');
     if (message && socket.connected) {
-      var datosenvio = {
+      datosenvio = {
         username: username,
         tipo: "imagen",
         message: message,
@@ -202,7 +200,7 @@ $(function() {
   });
   // Whenever the server emits 'new message', update the chat body
   socket.on('new message', function(data, callback) {
-    var obj = JSON.parse(data);
+    obj = JSON.parse(data);
 
     if(controlFechas(obj.fecha)){
       return false;
@@ -210,16 +208,16 @@ $(function() {
 
     if (obj.tipo === 'texto') {
       if (usuarioactual != "") {
-        var clase = "." + usuarioactual;
+        clase = "." + usuarioactual;
         $(clase).css('display', 'none');
       }
       propietario = window.localStorage.getItem('nombreUsuario');
-      var objetoClaves = {
+      objetoClaves = {
         key: window.localStorage.getItem("key"),
         keyBF: window.localStorage.getItem("keyBF"),
         iv: obj.iv
       };
-      var mensajeDecriptado = deCryptar(obj.message, objetoClaves);
+      mensajeDecriptado = deCryptar(obj.message, objetoClaves);
       if (usuarioactual !== obj.propietario) {
         clase = "." + obj.propietario;
         $(clase).css('display', 'block');
@@ -232,13 +230,13 @@ $(function() {
           }
         });
       }
-      var mensajesjson = window.localStorage.getItem(propietario + obj.propietario);
+      mensajesjson = window.localStorage.getItem(propietario + obj.propietario);
       if (mensajesjson !== "" && mensajesjson !== null) {
-        var conversacionactual = JSON.parse(mensajesjson);
+        conversacionactual = JSON.parse(mensajesjson);
       } else {
-        var conversacionactual = null;
+        conversacionactual = null;
       }
-      var mensajeobj = {
+      mensajeobj = {
         'propietario': obj.propietario,
         'fecha': obj.fecha,
         'mensaje': obj.message,
@@ -272,19 +270,18 @@ $(function() {
     // Murio por timeout
   });
   socket.on('new photo', function(data, callback) {
-    var clase;
-    var obj = JSON.parse(data);
+    obj = JSON.parse(data);
     if (usuarioactual != "") {
-      var clase = "." + usuarioactual;
+      clase = "." + usuarioactual;
       $(clase).css('display', 'none');
     }
     propietario = window.localStorage.getItem('nombreUsuario');
-    var objetoClaves = {
+    objetoClaves = {
       key: window.localStorage.getItem("key"),
       keyBF: window.localStorage.getItem("keyBF"),
       iv: obj.iv
     };
-    var mensajeDecriptado = deCryptar(obj.message, objetoClaves);
+    mensajeDecriptado = deCryptar(obj.message, objetoClaves);
     if (usuarioactual !== obj.propietario) {
       clase = "." + obj.propietario;
       $(clase).css('display', 'block');
@@ -297,14 +294,14 @@ $(function() {
         }
       });
     }
-    var mensajesjson = window.localStorage.getItem(propietario + obj.propietario);
+    mensajesjson = window.localStorage.getItem(propietario + obj.propietario);
     if (mensajesjson !== "" && mensajesjson !== null) {
       conversacionactual = JSON.parse(mensajesjson);
     } else {
       conversacionactual = null;
     }
-    var mensajeEncriptadoParaMostrar = cryptar("IMAGEN DESCARGADA", objetoClaves);
-    var mensajeobj = {
+    mensajeEncriptadoParaMostrar = cryptar("IMAGEN DESCARGADA", objetoClaves);
+    mensajeobj = {
       'propietario': obj.propietario,
       'fecha': obj.fecha,
       'mensaje': mensajeEncriptadoParaMostrar,
@@ -323,13 +320,13 @@ $(function() {
 
     switch (device.platform) {
       case "Android":
-        var storageLocation = 'file:///storage/emulated/0/Download';
+        storageLocation = 'file:///storage/emulated/0/Download';
         break;
       case "iOS":
-        var storageLocation = cordova.file.documentsDirectory;
+        storageLocation = cordova.file.documentsDirectory;
         break;
       case "browser":
-        var storageLocation = 'C:/Users/Nicolas/';
+        storageLocation = 'C:/Users/Nicolas/';
         break;
     }
 
@@ -368,7 +365,7 @@ $(function() {
 
   socket.on('reconnect', function() {
     if (username) {
-      var objuser = {
+      objuser = {
         username: username,
         token: window.localStorage.getItem("token")
       };
@@ -417,9 +414,7 @@ $(function() {
   }
 
   function onDeviceReady() {
-
     try{
-      // window.Statusbar.backgroundColorByHexString("#f7f7f8");
       if(window.Keyboard){
         window.Keyboard.shrinkView(true);
       }
@@ -434,14 +429,14 @@ $(function() {
     if (isLogged === 'undefined' || isLogged === false || isLogged === null) {
       window.location.href = "./index.html";
     } else {
-      var nombreUsuario = window.localStorage.getItem('nombreUsuario');
-      var usuarios = JSON.parse(window.localStorage.getItem('usuarios'));
+      nombreUsuario = window.localStorage.getItem('nombreUsuario');
+      usuarios = JSON.parse(window.localStorage.getItem('usuarios'));
 
       fechaDesde = window.localStorage.getItem('fecha_desde');
       fechaHasta = window.localStorage.getItem('fecha_hasta');
-
+      var items = [];
       for (var i = 0; i < usuarios.length; i++) {
-        $$("#usuarios").append('<li id="' + usuarios[i].username + '">' +
+        items.push('<li id="' + usuarios[i].username + '">' +
           '<a href="messages.html?mac=' + usuarios[i].username + '&apellidonombre=' + usuarios[i].apellidonombre + '" class="item-link item-content">' +
           '<div class="item-media"><img src="img/icon.png" width="30" /></div>' +
           '<div class="item-inner"><div class="item-title">' + usuarios[i].apellidonombre + '</div>' +
@@ -450,7 +445,20 @@ $(function() {
           '</div>' +
           '</a>' +
           '</li>');
+
+        // $$("#usuarios").append('<li id="' + usuarios[i].username + '">' +
+        //   '<a href="messages.html?mac=' + usuarios[i].username + '&apellidonombre=' + usuarios[i].apellidonombre + '" class="item-link item-content">' +
+        //   '<div class="item-media"><img src="img/icon.png" width="30" /></div>' +
+        //   '<div class="item-inner"><div class="item-title">' + usuarios[i].apellidonombre + '</div>' +
+        //   '<div class="item-after ' + usuarios[i].username + '" style="display: none;">' +
+        //   '<span class="badge"><i class="fa fa-exclamation"></i></span></div>' +
+        //   '</div>' +
+        //   '</a>' +
+        //   '</li>');
       }
+      var myList = myApp.virtualList('.list-block.list-block-search', {
+        items: items
+      });
 
       $("#nombreUsuario").html(nombreUsuario).change();
 
@@ -461,7 +469,7 @@ $(function() {
 
     }
 
-    var colasalida = window.localStorage.getItem("colasalida");
+    colasalida = window.localStorage.getItem("colasalida");
     if (colasalida === 'undefined' || colasalida === false || colasalida === null || colasalida === '') {
       colasalida = new Array();
       window.localStorage.setItem("colasalida", JSON.stringify(colasalida));
@@ -575,8 +583,8 @@ $(function() {
 
   myApp.onPageInit('messages', function(page) {
     usuarioactual = page.query.mac;
-    var apellidonombre = page.query.apellidonombre;
-    var clase;
+    apellidonombre = page.query.apellidonombre;
+
     if (usuarioactual != "") {
       clase = "." + usuarioactual;
       $(clase).css('display', 'none');
@@ -592,7 +600,7 @@ $(function() {
       scrollMessagesOnlyOnEdge: true
     });
 
-    var msgstr = window.localStorage.getItem(propietario + usuarioactual);
+    msgstr = window.localStorage.getItem(propietario + usuarioactual);
     if (msgstr !== "" && msgstr !== null) {
       var mensajes = JSON.parse(msgstr);
     } else {
@@ -655,10 +663,10 @@ $(function() {
   });
 
   function recorrido(result, agregados) {
-    var fechaactual = "";
+    fechaactual = "";
     $.each(result, function(i, field) {
       if (typeof field.fecha !== 'undefined') {
-        var fecharecorrido = field.fecha.split(" ")[0];
+        fecharecorrido = field.fecha.split(" ")[0];
         if (fecharecorrido !== fechaactual) {
           mostrardia = true;
           fechaactual = fecharecorrido;
@@ -669,7 +677,7 @@ $(function() {
       try{
         if(controlFechas(field.fecha) == false){
           var propietariomsj = field.propietario;
-          var objetoClaves = {
+          objetoClaves = {
             key: window.localStorage.getItem("key"),
             keyBF: window.localStorage.getItem("keyBF"),
             iv: field.iv
@@ -728,7 +736,7 @@ $(function() {
   function deCryptar(text, objClaves) {
 
     var bf = new Blowfish(objClaves.keyBF);
-    var encrypted64 = bf.base64Decode(text);
+    encrypted64 = bf.base64Decode(text);
     var encryptedHex = bf.decrypt(encrypted64);
     encryptedHex = bf.trimZeros(encryptedHex);
 
@@ -745,27 +753,27 @@ $(function() {
 
   function prepararMensaje(messageText) {
     var now = new Date();
-    var idMessage = now.getTime();
+    idMessage = now.getTime();
 
-    var mensajesjson = window.localStorage.getItem(propietario + usuarioactual);
+    mensajesjson = window.localStorage.getItem(propietario + usuarioactual);
     if (mensajesjson !== "" && mensajesjson !== null) {
-      var conversacionactual = JSON.parse(mensajesjson);
+      conversacionactual = JSON.parse(mensajesjson);
     } else {
-      var conversacionactual = null;
+      conversacionactual = null;
     }
 
-    var iv = JSON.stringify([getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17)]);
-    var iv2 = JSON.stringify([getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17)]);
+    iv = JSON.stringify([getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17)]);
+    iv2 = JSON.stringify([getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17)]);
 
     propietario = window.localStorage.getItem('nombreUsuario');
-    var objetoClaves = {
+    objetoClaves = {
       key: window.localStorage.getItem("key"),
       keyBF: window.localStorage.getItem("keyBF"),
       iv: iv
     };
-    var mensajeEncriptado = cryptar(messageText, objetoClaves);
+    mensajeEncriptado = cryptar(messageText, objetoClaves);
 
-    var mensajeobj = {
+    mensajeobj = {
       'propietario': propietario,
       'fecha': date(),
       'mensaje': mensajeEncriptado,
@@ -793,18 +801,18 @@ $(function() {
   }
 
   function prepararImagen(imagenDATA) {
-    var iv = JSON.stringify([getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17)]);
+    iv = JSON.stringify([getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17), getRandomInt(0, 17)]);
     propietario = window.localStorage.getItem('nombreUsuario');
-    var objetoClaves = {
+    objetoClaves = {
       key: window.localStorage.getItem("key"),
       keyBF: window.localStorage.getItem("keyBF"),
       iv: iv
     };
-    var mensajeEncriptado = cryptar(imagenDATA, objetoClaves);
-    var mensajeEncriptadoParaMostrar = cryptar("IMAGEN", objetoClaves);
+    mensajeEncriptado = cryptar(imagenDATA, objetoClaves);
+    mensajeEncriptadoParaMostrar = cryptar("IMAGEN", objetoClaves);
     // mensajeEncriptado = imagenDATA;
 
-    var mensajeobj = {
+    mensajeobj = {
       'propietario': propietario,
       'fecha': date(),
       'mensaje': mensajeEncriptadoParaMostrar,
@@ -812,7 +820,7 @@ $(function() {
       'registrationId': ''
     };
 
-    var mensajesjson = window.localStorage.getItem(propietario + usuarioactual);
+    mensajesjson = window.localStorage.getItem(propietario + usuarioactual);
     if (mensajesjson !== "" && mensajesjson !== null) {
       conversacionactual = JSON.parse(mensajesjson);
     } else {
@@ -848,7 +856,7 @@ $(function() {
           fileWriter.onerror = function(e) {
             myApp.console.log("No pudimos procesar tu imagen");
           };
-          var contentType = 'image/jpeg';
+          contentType = 'image/jpeg';
           // contentType = '';
           var DataBlob = b64toBlob(data, contentType);
           //					var blob = new Blob([data], { type: 'image/jpeg' });
@@ -919,7 +927,7 @@ function limpiarMac() {
 
 function salir() {
   window.localStorage.setItem('isLogged', false);
-  var usuarios = JSON.parse(window.localStorage.getItem('usuarios'));
+  usuarios = JSON.parse(window.localStorage.getItem('usuarios'));
 
   for (var i = 0; i < usuarios.length; i++) {
     window.localStorage.setItem(window.localStorage.getItem('nombreUsuario') + usuarios[i].username, "");

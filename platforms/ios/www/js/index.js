@@ -1,5 +1,3 @@
-"use strict";
-
 var host = window.localStorage.getItem('host');
 var device;
 var uuid;
@@ -23,9 +21,9 @@ function controlLogin() {
     if(nombreUsuario !== '' && claveUsuario !== ''){
       window.document.getElementById('nombreusuario').value = nombreUsuario;
       window.document.getElementById('password').value = claveUsuario;
-      // $('#nombreusuario').val(nombreUsuario);
-      // $('#password').val(claveUsuario);
-      login();
+      $('#nombreusuario').text(nombreUsuario);
+      $('#password').text(claveUsuario);
+      login(true);
     }
   }
 }
@@ -81,10 +79,17 @@ function loginSecond(cifradoEnc, clave){
   });
 }
 
-function login(){
+function login(use_localstorage){
   try{
-    var nombreusuario = $('#nombreusuario').val();
-    var clave = $('#password').val();
+
+    if(use_localstorage){
+      var nombreusuario = window.localStorage.getItem('nombreUsuario') ? window.localStorage.getItem('nombreUsuario') : '';
+      var clave = window.localStorage.getItem('claveUsuario') ? window.localStorage.getItem('claveUsuario') : '';
+    }else{
+      var nombreusuario = $('#nombreusuario').val();
+      var clave = $('#password').val();
+    }
+
     $('.spinner').removeClass('hidden');
 
     // var usuarioprincipal = window.localStorage.getItem('usuarioprincipal');
