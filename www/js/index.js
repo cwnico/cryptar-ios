@@ -19,8 +19,6 @@ function controlLogin() {
     var claveUsuario = window.localStorage.getItem('claveUsuario') ? window.localStorage.getItem('claveUsuario') : '';
 
     if(nombreUsuario !== '' && claveUsuario !== ''){
-      window.document.getElementById('nombreusuario').value = nombreUsuario;
-      window.document.getElementById('password').value = claveUsuario;
       $('#nombreusuario').text(nombreUsuario);
       $('#password').text(claveUsuario);
       login(true);
@@ -139,19 +137,20 @@ function login(use_localstorage){
 
 $('document').ready(function(){
   controlhost();
-});
-function onDeviceReady() {
   controlLogin();
+});
 
+function onDeviceReady() {
   try {
     window.plugins.PushbotsPlugin.initialize("5de5244640038e0a430f9c63", {"android":{"sender_id":"724144400703"}});
 
     window.plugins.PushbotsPlugin.on("user:ids", function(data){
       window.localStorage.setItem('token', data.token);
     });
-  } catch (err) {
-    console.log(err.message);
+  }catch(err) {
+    $(".error").html(err.message).fadeIn().fadeOut(2000);
   }
 }
+
 document.addEventListener("deviceready", onDeviceReady, false);
 

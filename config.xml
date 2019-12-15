@@ -13,6 +13,7 @@
     <preference name="android-minSdkVersion" value="19" />
     <preference name="android-build-tool" value="gradle" />
     <preference name="phonegap-version" value="cli-8.1.1" />
+    <preference name="Fullscreen" value="true" />
     <preference name="StatusBarBackgroundColor" value="#f7f7f8" />
     <platform name="ios">
         <splash height="1136" platform="ios" src="www/res/screen/ios/Default-568h@2x~iphone.png" width="640" />
@@ -40,6 +41,7 @@
         <access origin="https://cryptar.com.ar/*" />
         <access origin="http://localhost/*" />
         <access origin="*" />
+        <preference name="Orientation" value="portrait" />
     </platform>
     <allow-navigation href="http://*" />
     <allow-navigation href="https://*" />

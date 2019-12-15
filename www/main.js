@@ -460,13 +460,15 @@ $(function() {
         items: items
       });
 
-      $("#nombreUsuario").html(nombreUsuario).change();
+      $("#nombreUsuario").html(nombreUsuario);
 
       document.addEventListener("backbutton", stopEvent, false);
       document.addEventListener("volumedownbutton", stopEvent, false);
       document.addEventListener("volumeupbutton", stopEvent, false);
       document.addEventListener("online", enviarcola, false);
 
+      $(".list-block.list-block-search").change();
+      $(".list-block.list-block-search").trigger("change");
     }
 
     colasalida = window.localStorage.getItem("colasalida");

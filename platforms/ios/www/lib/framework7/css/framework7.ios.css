@@ -900,7 +900,7 @@ html.android .page-from-center-to-right:before {
 }
 .navbar,
 .toolbar {
-  height: 65px;
+  height: 54px;
   width: 100%;
   box-sizing: border-box;
   font-size: 17px;
@@ -909,6 +909,9 @@ html.android .page-from-center-to-right:before {
   z-index: 500;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+.toolbar.messagebar {
+  height: 65px;
 }
 .navbar b,
 .toolbar b {
