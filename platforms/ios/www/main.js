@@ -412,7 +412,34 @@ $(function() {
     e.stopImmediatePropagation();
     $("#toolbar-navigation").removeClass('hidden');
   }
+  $('document').ready(function(){
+    var usuarios = JSON.parse(window.localStorage.getItem('usuarios'));
+    // var items = [];
+    for (var i = 0; i < usuarios.length; i++) {
+      // items.push('<li id="' + usuarios[i].username + '">' +
+      //   '<a href="messages.html?mac=' + usuarios[i].username + '&apellidonombre=' + usuarios[i].apellidonombre + '" class="item-link item-content">' +
+      //   '<div class="item-media"><img src="img/icon.png" width="30" /></div>' +
+      //   '<div class="item-inner"><div class="item-title">' + usuarios[i].apellidonombre + '</div>' +
+      //   '<div class="item-after ' + usuarios[i].username + '" style="display: none;">' +
+      //   '<span class="badge"><i class="fa fa-exclamation"></i></span></div>' +
+      //   '</div>' +
+      //   '</a>' +
+      //   '</li>');
 
+      $$("#usuarios").append('<li id="' + usuarios[i].username + '">' +
+        '<a href="messages.html?mac=' + usuarios[i].username + '&apellidonombre=' + usuarios[i].apellidonombre + '" class="item-link item-content">' +
+        '<div class="item-media"><img src="img/icon.png" width="30" /></div>' +
+        '<div class="item-inner"><div class="item-title">' + usuarios[i].apellidonombre + '</div>' +
+        '<div class="item-after ' + usuarios[i].username + '" style="display: none;">' +
+        '<span class="badge"><i class="fa fa-exclamation"></i></span></div>' +
+        '</div>' +
+        '</a>' +
+        '</li>');
+    }
+    // var myList = myApp.virtualList('.list-block.list-block-search', {
+    //   items: items
+    // });
+  });
   function onDeviceReady() {
     try{
       if(window.Keyboard){
@@ -430,35 +457,9 @@ $(function() {
       window.location.href = "./index.html";
     } else {
       nombreUsuario = window.localStorage.getItem('nombreUsuario');
-      usuarios = JSON.parse(window.localStorage.getItem('usuarios'));
 
       fechaDesde = window.localStorage.getItem('fecha_desde');
       fechaHasta = window.localStorage.getItem('fecha_hasta');
-      var items = [];
-      for (var i = 0; i < usuarios.length; i++) {
-        items.push('<li id="' + usuarios[i].username + '">' +
-          '<a href="messages.html?mac=' + usuarios[i].username + '&apellidonombre=' + usuarios[i].apellidonombre + '" class="item-link item-content">' +
-          '<div class="item-media"><img src="img/icon.png" width="30" /></div>' +
-          '<div class="item-inner"><div class="item-title">' + usuarios[i].apellidonombre + '</div>' +
-          '<div class="item-after ' + usuarios[i].username + '" style="display: none;">' +
-          '<span class="badge"><i class="fa fa-exclamation"></i></span></div>' +
-          '</div>' +
-          '</a>' +
-          '</li>');
-
-        // $$("#usuarios").append('<li id="' + usuarios[i].username + '">' +
-        //   '<a href="messages.html?mac=' + usuarios[i].username + '&apellidonombre=' + usuarios[i].apellidonombre + '" class="item-link item-content">' +
-        //   '<div class="item-media"><img src="img/icon.png" width="30" /></div>' +
-        //   '<div class="item-inner"><div class="item-title">' + usuarios[i].apellidonombre + '</div>' +
-        //   '<div class="item-after ' + usuarios[i].username + '" style="display: none;">' +
-        //   '<span class="badge"><i class="fa fa-exclamation"></i></span></div>' +
-        //   '</div>' +
-        //   '</a>' +
-        //   '</li>');
-      }
-      var myList = myApp.virtualList('.list-block.list-block-search', {
-        items: items
-      });
 
       $("#nombreUsuario").html(nombreUsuario);
 
@@ -466,9 +467,6 @@ $(function() {
       document.addEventListener("volumedownbutton", stopEvent, false);
       document.addEventListener("volumeupbutton", stopEvent, false);
       document.addEventListener("online", enviarcola, false);
-
-      $(".list-block.list-block-search").change();
-      $(".list-block.list-block-search").trigger("change");
     }
 
     colasalida = window.localStorage.getItem("colasalida");
