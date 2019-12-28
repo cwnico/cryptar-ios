@@ -1454,7 +1454,7 @@ html.pixel-ratio-3 .toolbar:before {
 }
 .navbar-through .page-content,
 .navbar-fixed .page-content {
-  padding-top: 44px;
+  padding-top: 54px;
 }
 .navbar-through .with-subnavbar .page-content,
 .navbar-fixed .with-subnavbar .page-content,
@@ -1474,7 +1474,7 @@ html.pixel-ratio-3 .toolbar:before {
 .toolbar-fixed .page-content,
 .tabbar-through .page-content,
 .tabbar-fixed .page-content {
-  padding-bottom: 44px;
+  padding-bottom: 66px;
 }
 .tabbar-labels-fixed .page-content,
 .tabbar-labels-through .page-content {

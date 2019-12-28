@@ -51,7 +51,58 @@ function controlFechas(fecha){
 
 var $$ = Dom7;
 var usuarioactual = "";
-$(function() {
+$('document').ready(function(){
+  var usuarios = JSON.parse(window.localStorage.getItem('usuarios'));
+  // var items = [];
+  for (var i = 0; i < usuarios.length; i++) {
+    $$("#usuarios").append('<li id="' + usuarios[i].username + '">' +
+      '<a href="messages.html?mac=' + usuarios[i].username + '&apellidonombre=' + usuarios[i].apellidonombre + '" class="item-link item-content">' +
+      '<div class="item-media"><img src="img/icon.png" width="30" /></div>' +
+      '<div class="item-inner"><div class="item-title">' + usuarios[i].apellidonombre + '</div>' +
+      '<div class="item-after ' + usuarios[i].username + '" style="display: none;">' +
+      '<span class="badge"><i class="fa fa-exclamation"></i></span></div>' +
+      '</div>' +
+      '</a>' +
+      '</li>');
+  }
+  try{
+    if(window.Keyboard){
+      window.Keyboard.shrinkView(true);
+    }
+    if(Keyboard){
+      Keyboard.shrinkView(true);
+    }
+  }catch (e) {
+    console.log(e.message)
+  }
+  $('.spinner').addClass('hidden');
+
+  var isLogged = window.localStorage.getItem('isLogged');
+  if (isLogged === 'undefined' || isLogged === false || isLogged === null) {
+    window.location.href = "./index.html";
+  } else {
+    nombreUsuario = window.localStorage.getItem('nombreUsuario');
+
+    fechaDesde = window.localStorage.getItem('fecha_desde');
+    fechaHasta = window.localStorage.getItem('fecha_hasta');
+
+    $("#nombreUsuario").html(nombreUsuario);
+
+    document.addEventListener("backbutton", stopEvent, false);
+    document.addEventListener("volumedownbutton", stopEvent, false);
+    document.addEventListener("volumeupbutton", stopEvent, false);
+    document.addEventListener("online", enviarcola, false);
+  }
+
+  colasalida = window.localStorage.getItem("colasalida");
+  if (colasalida === 'undefined' || colasalida === false || colasalida === null || colasalida === '') {
+    colasalida = new Array();
+    window.localStorage.setItem("colasalida", JSON.stringify(colasalida));
+  }
+
+  propietario = window.localStorage.getItem('nombreUsuario');
+  setUsername(propietario);
+
   var typing = false;
   var lastTypingTime;
 
@@ -412,90 +463,6 @@ $(function() {
     e.stopImmediatePropagation();
     $("#toolbar-navigation").removeClass('hidden');
   }
-  $('document').ready(function(){
-    var usuarios = JSON.parse(window.localStorage.getItem('usuarios'));
-    // var items = [];
-    for (var i = 0; i < usuarios.length; i++) {
-      // items.push('<li id="' + usuarios[i].username + '">' +
-      //   '<a href="messages.html?mac=' + usuarios[i].username + '&apellidonombre=' + usuarios[i].apellidonombre + '" class="item-link item-content">' +
-      //   '<div class="item-media"><img src="img/icon.png" width="30" /></div>' +
-      //   '<div class="item-inner"><div class="item-title">' + usuarios[i].apellidonombre + '</div>' +
-      //   '<div class="item-after ' + usuarios[i].username + '" style="display: none;">' +
-      //   '<span class="badge"><i class="fa fa-exclamation"></i></span></div>' +
-      //   '</div>' +
-      //   '</a>' +
-      //   '</li>');
-
-      $$("#usuarios").append('<li id="' + usuarios[i].username + '">' +
-        '<a href="messages.html?mac=' + usuarios[i].username + '&apellidonombre=' + usuarios[i].apellidonombre + '" class="item-link item-content">' +
-        '<div class="item-media"><img src="img/icon.png" width="30" /></div>' +
-        '<div class="item-inner"><div class="item-title">' + usuarios[i].apellidonombre + '</div>' +
-        '<div class="item-after ' + usuarios[i].username + '" style="display: none;">' +
-        '<span class="badge"><i class="fa fa-exclamation"></i></span></div>' +
-        '</div>' +
-        '</a>' +
-        '</li>');
-    }
-    // var myList = myApp.virtualList('.list-block.list-block-search', {
-    //   items: items
-    // });
-  });
-  function onDeviceReady() {
-    try{
-      if(window.Keyboard){
-        window.Keyboard.shrinkView(true);
-      }
-      if(Keyboard){
-        Keyboard.shrinkView(true);
-      }
-    }catch (e) {
-      console.log(e.message)
-    }
-    $('.spinner').addClass('hidden');
-    var isLogged = window.localStorage.getItem('isLogged');
-    if (isLogged === 'undefined' || isLogged === false || isLogged === null) {
-      window.location.href = "./index.html";
-    } else {
-      nombreUsuario = window.localStorage.getItem('nombreUsuario');
-
-      fechaDesde = window.localStorage.getItem('fecha_desde');
-      fechaHasta = window.localStorage.getItem('fecha_hasta');
-
-      $("#nombreUsuario").html(nombreUsuario);
-
-      document.addEventListener("backbutton", stopEvent, false);
-      document.addEventListener("volumedownbutton", stopEvent, false);
-      document.addEventListener("volumeupbutton", stopEvent, false);
-      document.addEventListener("online", enviarcola, false);
-    }
-
-    colasalida = window.localStorage.getItem("colasalida");
-    if (colasalida === 'undefined' || colasalida === false || colasalida === null || colasalida === '') {
-      colasalida = new Array();
-      window.localStorage.setItem("colasalida", JSON.stringify(colasalida));
-    }
-
-    propietario = window.localStorage.getItem('nombreUsuario');
-    setUsername(propietario);
-    // pictureSource = navigator.camera.PictureSourceType;
-    // destinationType = navigator.camera.DestinationType;
-    if (device) {
-      modeloUUID = device.model + '' + device.uuid;
-    }
-
-    try{
-      window.plugins.PushbotsPlugin.initialize("5de5244640038e0a430f9c63", {"android":{"sender_id":"724144400703"}});
-      window.plugins.PushbotsPlugin.on("user:ids", function(data){
-        window.localStorage.setItem('token', data.token);
-      })
-    } catch (err) {
-      console.log(err.message);
-    }
-
-    $('.spinner').addClass('hidden');
-  }
-
-  document.addEventListener("deviceready", onDeviceReady, false);
 
   $$(document).on('pageInit', function(e) {
     $("#toolbar-navigation").removeClass('hidden');
@@ -916,6 +883,27 @@ $(function() {
     }
     console.log('Error (' + fileName + '): ' + msg);
   };
+
+  function onDeviceReady() {
+    // pictureSource = navigator.camera.PictureSourceType;
+    // destinationType = navigator.camera.DestinationType;
+    try{
+      if (device) {
+        modeloUUID = device.model + '' + device.uuid;
+      }
+      window.plugins.PushbotsPlugin.initialize("5de5244640038e0a430f9c63", {"android":{"sender_id":"724144400703"}});
+      window.plugins.PushbotsPlugin.on("user:ids", function(data){
+        window.localStorage.setItem('token', data.token);
+      })
+    } catch (err) {
+      console.log(err.message);
+    }
+
+    $('.spinner').addClass('hidden');
+  }
+
+  document.addEventListener("deviceready", onDeviceReady, false);
+
 });
 
 // DUPLICADAS Y POR FUERA PARA SU USO EXTERNO.
