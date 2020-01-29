@@ -138,6 +138,8 @@ function login(use_localstorage){
 $('document').ready(function(){
   controlhost();
   controlLogin();
+
+
 });
 
 function onDeviceReady() {

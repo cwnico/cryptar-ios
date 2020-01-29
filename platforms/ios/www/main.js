@@ -684,38 +684,47 @@ $('document').ready(function(){
   }
 
   function cryptar(mensaje, objClaves) {
-    // Convert text to bytes
+    // First ENC
     var textBytes = aesjs.utils.utf8.toBytes(mensaje);
-    var key = JSON.parse(objClaves.key);
-    var iv = JSON.parse(objClaves.iv)
-    var aesOfb = new aesjs.ModeOfOperation.ofb(key, iv);
-    var encryptedBytes = aesOfb.encrypt(textBytes);
-    // To print or store the binary data, you may convert it to hex
-    var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
-
-    var bf = new Blowfish(objClaves.keyBF);
-    var res = bf.encrypt(encryptedHex);
-    res = bf.base64Encode(res);
-
-    return res;
-  }
-
-  function deCryptar(text, objClaves) {
-
-    var bf = new Blowfish(objClaves.keyBF);
-    encrypted64 = bf.base64Decode(text);
-    var encryptedHex = bf.decrypt(encrypted64);
-    encryptedHex = bf.trimZeros(encryptedHex);
-
     var key = JSON.parse(objClaves.key);
     var iv = JSON.parse(objClaves.iv);
 
-    var encryptedBytes = aesjs.utils.hex.toBytes(encryptedHex);
     var aesOfb = new aesjs.ModeOfOperation.ofb(key, iv);
-    var decryptedBytes = aesOfb.decrypt(encryptedBytes);
-    var decryptedText = aesjs.utils.utf8.fromBytes(decryptedBytes);
+    var encryptedBytes = aesOfb.encrypt(textBytes);
+    var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
 
-    return decryptedText;
+    // Second ENC
+    var cryptTF = twofish(iv);
+    var keyTF = cryptTF.stringToByteArray(objClaves.keyBF);
+    var textByteArray = cryptTF.stringToByteArray(encryptedHex);
+    var encyptedMessage = cryptTF.encryptCBC(keyTF, textByteArray);
+    encyptedMessage = JSON.stringify(encyptedMessage);
+
+    return encyptedMessage;
+  }
+
+  function deCryptar(text, objClaves) {
+    try {
+      var key = JSON.parse(objClaves.key);
+      var iv = JSON.parse(objClaves.iv);
+
+      // First DEC
+      var cryptTF = twofish(iv);
+      var keyTF = cryptTF.stringToByteArray(objClaves.keyBF);
+      var cpt = cryptTF.decryptCBC(keyTF, JSON.parse(text));
+      var encryptedHex = cryptTF.byteArrayToString(cpt);
+
+      // Second DEC
+      var encryptedHex = encryptedHex.replace(/\0+$/g, "");
+      var encryptedBytes = aesjs.utils.hex.toBytes(encryptedHex);
+      var aesOfb = new aesjs.ModeOfOperation.ofb(key, iv);
+      var decryptedBytes = aesOfb.decrypt(encryptedBytes);
+      var decryptedText = aesjs.utils.utf8.fromBytes(decryptedBytes);
+
+      return decryptedText;
+    }catch (e) {
+      return "¡ERROR DE LECTURA! - Mensaje Perdido.";
+    }
   }
 
   function prepararMensaje(messageText) {
