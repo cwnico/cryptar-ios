@@ -1,8 +1,6 @@
 $('document').ready(function(){
 	var host = (localStorage.getItem('host') === 'false' ? '' : window.localStorage.getItem('host'));
 	$('#host').val(host);
-
-	window.localStorage.setItem('host', 'false');
 });
 
 function configurarhosts() {

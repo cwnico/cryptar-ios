@@ -1,25 +1,127 @@
-/*
-   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
-   statusbar plugin is added, it also adds default setting to make the content white via:
-
-       <preference name="StatusBarStyle" value="lightcontent"/>
-
-   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
-   in the config.xml file and will be added by the CLI when you build locally.
-
-   See https://github.com/apache/cordova-plugin-statusbar
-*/
-
 .statusbar-overlay {
     background: #000000;
 }
 
-#tituloapp
-{
-	font-weight: bold; letter-spacing: 1px;
+.tituloapp {
+	margin: 0px auto;
+	margin-top: .4em;
 }
 
-a
-{
+.tituloapp img{
+	width: 12em;
+}
+
+a {
 	cursor: pointer;
+}
+
+.message-name{
+	display: none !important;
+}
+.message-received >	 .message-text > .message-date,
+.message-sent >	 .message-text > .message-date{
+	text-align: right;
+	font-size: 0.7em;
+	font-style: italic;
+}
+.hidden {
+	display: none !important;
+}
+.spinner
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: row nowrap;
+	-ms-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background: none repeat scroll 0 0  #16152a;
+}
+*:not(input,textarea) {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+input {
+	-webkit-user-select: auto !important;
+}
+
+* {
+	-webkit-user-select: text;
+}
+
+.login-page,
+.register-page {
+	background: #16152a !important;
+}
+
+#toolbar-navigation .toolbar-inner .tab-link.active i, .link.send-message {
+	/*color: #d9534f;*/
+	color: #00acec;
+}
+
+.link.send-message i{
+	font-size: 1.3em;
+}
+
+#toolbar-navigation .toolbar-inner .tab-link, #toolbar-navigation .toolbar-inner .tab-link i, #toolbar-navigation .toolbar-inner .tab-link span, a i{
+	color: white;
+}
+
+.navbar.navbar-fixed, .toolbar.tabbar, .searchbar.searchbar-init, #tab2 .navbar{
+	background: #16152a;
+}
+
+#usuarios, .page-content, .list-block ul:before, .list-block ul:after, .toolbar.messagebar .toolbar-inner, .toolbar:before {
+	background: #1a2750;
+}
+
+.page-content .content-block p, #usuarios{
+	color: white;
+}
+
+.page-content .content-block p{
+	font-size: 1.7em;
+}
+
+.navbar-inner.navbar-on-center, #cajademensajes{
+	color: white;
+}
+
+.message-sent .message-text {
+	background-color: #00aeef !important;
+}
+
+.messagebar textarea + .link {
+	margin: 0px 8px !important;
+}
+
+#cajademensajes{
+	background: #125080;
+	border: none;
+}
+.messagebar textarea{
+	line-height: 23px !important;
+	padding: 12px 8px !important;
+	height: 2.6em !important;
+}
+
+.item-link.item-content .item-media i{
+	color:#125080;
+}
+
+.navbar-fixed .page > .searchbar, .navbar-through .page > .searchbar, .navbar-fixed > .searchbar, .navbar-through > .searchbar {
+	top: 53px !important;
 }

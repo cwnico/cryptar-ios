@@ -57,7 +57,7 @@ $('document').ready(function(){
   for (var i = 0; i < usuarios.length; i++) {
     $$("#usuarios").append('<li id="' + usuarios[i].username + '">' +
       '<a href="messages.html?mac=' + usuarios[i].username + '&apellidonombre=' + usuarios[i].apellidonombre + '" class="item-link item-content">' +
-      '<div class="item-media"><img src="img/icon.png" width="30" /></div>' +
+      '<div class="item-media"><img src="img/icon.png" width="50" /></div>' +
       '<div class="item-inner"><div class="item-title">' + usuarios[i].apellidonombre + '</div>' +
       '<div class="item-after ' + usuarios[i].username + '" style="display: none;">' +
       '<span class="badge"><i class="fa fa-exclamation"></i></span></div>' +
@@ -556,7 +556,7 @@ $('document').ready(function(){
       clase = "." + usuarioactual;
       $(clase).css('display', 'none');
     }
-    $('#nombredechat').html(apellidonombre);
+    $('#nombredechat').html(decodeURIComponent(apellidonombre));
     $('#cajademensajes').focus();
     myApp.showIndicator();
     mostrardia = false;
@@ -592,24 +592,25 @@ $('document').ready(function(){
       isFocused = document.activeElement && document.activeElement === myMessagebar.textarea[0];
     });
 
-    $$('.messages-content').on('touchstart', function(evt) {
-      // topNavbar();
-      if($("textarea").is(":focus")){
-        if(!tapped){ //if tap is not set, set up single tap
-          evt.preventDefault();
-          evt.stopPropagation();
-          evt.stopImmediatePropagation();
-          myMessages.scrollMessages();
-          tapped=setTimeout(function(){
-            tapped=null;
-          },300);
-        } else {
-          clearTimeout(tapped);
-          tapped=null;
-        }
-      }
-      enviarcola();
-    });
+
+    // $$('.messages-content').on('touchstart', function(evt) {
+    //   // topNavbar();
+    //   if($("textarea").is(":focus")){
+    //     if(!tapped){ //if tap is not set, set up single tap
+    //       evt.preventDefault();
+    //       evt.stopPropagation();
+    //       evt.stopImmediatePropagation();
+    //       myMessages.scrollMessages();
+    //       tapped=setTimeout(function(){
+    //         tapped=null;
+    //       },300);
+    //     } else {
+    //       clearTimeout(tapped);
+    //       tapped=null;
+    //     }
+    //   }
+    //   enviarcola();
+    // });
 
     $$('.messagebar a.send-message').on('click', function(e) {
       var messageText = myMessagebar.value();

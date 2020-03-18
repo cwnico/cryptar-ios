@@ -18,7 +18,7 @@
  */
 //
 //  main.m
-//  Cryptar Chat
+//  Cryptar Chat - 1.0.0
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
