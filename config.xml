@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.cryptar.titanio" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Cryptar Chat</name>
+    <name>Cryptar-Chat</name>
     <description>
 		Cryptar - by Sistemas Titanio
     </description>
@@ -21,15 +21,7 @@
         <splash height="2208" platform="ios" src="www/res/screen/ios/Default-736h.png" width="1242" />
         <splash height="960" platform="ios" src="www/res/screen/ios/Default@2x~iphone.png" width="640" />
         <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
-        <icon height="57" src="www/res/icon/ios/icon.jpg" width="57" />
-        <icon height="60" src="www/res/icon/ios/icon-60.jpg" width="60" />
-        <icon height="120" src="www/res/icon/ios/icon-60@2x.jpg" width="120" />
-        <icon height="180" src="www/res/icon/ios/icon-60@3x.jpg" width="180" />
-        <icon height="80" src="www/res/icon/ios/icon-40@2x.jpg" width="80" />
-        <icon height="50" src="www/res/icon/ios/icon-50.jpg" width="50" />
-        <icon height="100" src="www/res/icon/ios/icon-50@2x.jpg" width="100" />
-        <icon height="72" src="www/res/icon/ios/icon-72.jpg" width="72" />
-        <icon height="144" src="www/res/icon/ios/icon-72@2x.jpg" width="144" />
+        <icon src="www/res/icon/ios/icon-cryptar.png"/>
         <allow-navigation href="https://cryptar.com.ar" />
         <allow-navigation href="https://cryptarchat.cryptar.com.ar" />
         <allow-navigation href="https://*" />
