@@ -10,6 +10,7 @@
     <content src="index.html" />
     <preference name="prerendered-icon" value="true" />
     <gap:plugin name="pushbots-cordova-plugin" source="npm" spec="1.6.x" />
+    <preference name="phonegap-version" value="cli-9.0.0" />
     <preference name="Fullscreen" value="true" />
     <preference name="StatusBarBackgroundColor" value="#f7f7f8" />
     <platform name="ios">

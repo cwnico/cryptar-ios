@@ -1,5 +1,5 @@
 .statusbar-overlay {
-    background: #000000;
+	background: #000000;
 }
 
 .tituloapp {
@@ -84,7 +84,7 @@ input {
 	background: #16152a;
 }
 
-#usuarios, .page-content, .list-block ul:before, .list-block ul:after, .toolbar.messagebar .toolbar-inner, .toolbar:before {
+#usuarios, .page-content, .list-block ul:before, .list-block ul:after, .toolbar.messagebar .toolbar-inner, .toolbar:before, .navbar:after, .navbar:before, .searchbar:after {
 	background: #1a2750;
 }
 

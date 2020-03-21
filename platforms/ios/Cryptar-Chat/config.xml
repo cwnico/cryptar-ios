@@ -117,6 +117,7 @@
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="prerendered-icon" value="true" />
+    <preference name="phonegap-version" value="cli-9.0.0" />
     <preference name="Fullscreen" value="true" />
     <preference name="StatusBarBackgroundColor" value="#f7f7f8" />
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
