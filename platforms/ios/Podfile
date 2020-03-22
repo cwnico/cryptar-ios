@@ -2,7 +2,7 @@
 
 platform :ios, '9.0'
 
-target 'C:\wamp64\www\CRYPTAR\CRYPTARAPP-IOS\platforms\ios\Cryptar-Chat' do
-	project 'C:\wamp64\www\CRYPTAR\CRYPTARAPP-IOS\platforms\ios\Cryptar-Chat.xcodeproj'
+target 'C:\wamp64\www\CRYPTAR\CRYPTARAPP-IOS\platforms\ios\Cryptar Chat' do
+	project 'C:\wamp64\www\CRYPTAR\CRYPTARAPP-IOS\platforms\ios\Cryptar Chat.xcodeproj'
 
 end

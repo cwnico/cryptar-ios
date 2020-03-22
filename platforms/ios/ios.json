@@ -75,10 +75,6 @@
             {
               "xml": "<feature name=\"Vibration\"><param name=\"ios-package\" value=\"CDVVibration\" /></feature>",
               "count": 1
-            },
-            {
-              "xml": "<feature name=\"PushbotsPlugin\"><param name=\"ios-package\" value=\"PushbotsPlugin\" /></feature>",
-              "count": 1
             }
           ]
         }
@@ -106,32 +102,6 @@
           "NSPhotoLibraryUsageDescription": [
             {
               "xml": "<string> </string>",
-              "count": 1
-            }
-          ],
-          "UIBackgroundModes": [
-            {
-              "xml": "<array><string>remote-notification</string></array>",
-              "count": 1
-            }
-          ]
-        }
-      },
-      "*/Entitlements-Debug.plist": {
-        "parents": {
-          "aps-environment": [
-            {
-              "xml": "<string>development</string>",
-              "count": 1
-            }
-          ]
-        }
-      },
-      "*/Entitlements-Release.plist": {
-        "parents": {
-          "aps-environment": [
-            {
-              "xml": "<string>production</string>",
               "count": 1
             }
           ]
@@ -192,9 +162,6 @@
       "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
-    },
-    "pushbots-cordova-plugin": {
       "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     }
   },
@@ -685,14 +652,6 @@
         "navigator.notification",
         "navigator"
       ]
-    },
-    {
-      "id": "pushbots-cordova-plugin.PushbotsPlugin",
-      "file": "plugins/pushbots-cordova-plugin/www/pushbots.js",
-      "pluginId": "pushbots-cordova-plugin",
-      "clobbers": [
-        "PushbotsPlugin"
-      ]
     }
   ],
   "plugin_metadata": {
@@ -712,7 +671,6 @@
     "cordova-plugin-prevent-screenshot": "1.0.0",
     "cordova-plugin-statusbar": "2.1.3",
     "cordova-plugin-vibration": "2.1.6",
-    "cordova-plugin-whitelist": "1.3.4",
-    "pushbots-cordova-plugin": "1.6.14"
+    "cordova-plugin-whitelist": "1.3.4"
   }
 }

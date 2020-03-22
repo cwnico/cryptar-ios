@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.cryptar.titanio" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Cryptar-Chat</name>
+    <name>Cryptar Chat</name>
     <description>
 		Cryptar - by Sistemas Titanio
     </description>
@@ -9,7 +9,6 @@
     </author>
     <content src="index.html" />
     <preference name="prerendered-icon" value="true" />
-    <gap:plugin name="pushbots-cordova-plugin" source="npm" spec="1.6.x" />
     <preference name="phonegap-version" value="cli-9.0.0" />
     <preference name="Fullscreen" value="true" />
     <preference name="StatusBarBackgroundColor" value="#f7f7f8" />
@@ -19,7 +18,7 @@
         <splash height="2208" platform="ios" src="www/res/screen/ios/Default-736h.png" width="1242" />
         <splash height="960" platform="ios" src="www/res/screen/ios/Default@2x~iphone.png" width="640" />
         <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
-        <icon src="www/res/icon/ios/icon-cryptar.png"/>
+        <icon src="www/res/icon/ios/icon-cryptar.png" />
         <allow-navigation href="https://cryptar.com.ar" />
         <allow-navigation href="https://cryptarchat.cryptar.com.ar" />
         <allow-navigation href="https://*" />
@@ -83,5 +82,4 @@
     <plugin name="cordova-plugin-dialogs" spec="^2.0.2" />
     <plugin name="cordova-plugin-keyboard" spec="1.2.0" />
     <plugin name="cordova-plugin-console" spec="^1.1.0" />
-    <plugin name="pushbots-cordova-plugin" spec="^1.6.14" />
 </widget>
