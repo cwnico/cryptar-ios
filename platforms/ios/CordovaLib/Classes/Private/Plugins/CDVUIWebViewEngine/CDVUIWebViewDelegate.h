@@ -18,7 +18,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import <Cordova/CDVAvailability.h>
+#import "CDVAvailability.h"
 
 /**
  * Distinguishes top-level navigations from sub-frame navigations.

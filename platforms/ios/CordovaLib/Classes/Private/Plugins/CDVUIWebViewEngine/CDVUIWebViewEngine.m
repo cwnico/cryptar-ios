@@ -176,7 +176,7 @@
 
     if (uiWebViewDelegate &&
         [uiWebViewDelegate conformsToProtocol:@protocol(UIWebViewDelegate)]) {
-        self.uiWebViewDelegate = [[CDVUIWebViewDelegate alloc] initWithDelegate:(id <UIWebViewDelegate>)uiWebViewDelegate];
+        self.uiWebViewDelegate = [[CDVUIWebViewDelegate alloc] initWithDelegate:(id <UIWebViewDelegate>)self.viewController];
         uiWebView.delegate = self.uiWebViewDelegate;
     }
 
