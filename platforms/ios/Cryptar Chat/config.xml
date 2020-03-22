@@ -83,10 +83,8 @@
     <allow-intent href="geo:*" />
     <access origin="https://cryptarchat.cryptar.com.ar" />
     <access origin="https://cryptar.com.ar" />
-    <splash height="1334" platform="ios" src="www/res/screen/ios/Default-667h.png" width="750" />
-    <splash height="2208" platform="ios" src="www/res/screen/ios/Default-736h.png" width="1242" />
-    <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
-    <icon density="mdpi" height="57" platform="ios" src="www/res/icon/ios/Icon.png" width="57" />
+    <splash platform="ios" src="www/res/screen/ios/Default-667h.png" />
+    <icon platform="ios" src="www/res/icon/ios/Icon.png" />
     <allow-navigation href="https://cryptar.com.ar" />
     <allow-navigation href="https://cryptarchat.cryptar.com.ar" />
     <allow-navigation href="https://*" />
