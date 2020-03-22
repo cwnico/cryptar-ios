@@ -9,13 +9,19 @@
     </author>
     <content src="index.html" />
     <preference name="prerendered-icon" value="true" />
-    <gap:plugin name="pushbots-cordova-plugin" spec="1.6.12" source="npm" />
+    <gap:plugin name="pushbots-cordova-plugin" source="npm" spec="1.6.12" />
     <preference name="android-minSdkVersion" value="19" />
     <preference name="phonegap-version" value="cli-8.1.1" />
     <preference name="android-build-tool" value="gradle" />
     <preference name="Fullscreen" value="true" />
     <preference name="StatusBarBackgroundColor" value="#f7f7f8" />
+    <icon src="icon.png" />
     <platform name="ios">
+        <splash height="1136" platform="ios" src="www/res/screen/ios/Default-568h@2x~iphone.png" width="640" />
+        <splash height="1334" platform="ios" src="www/res/screen/ios/Default-667h.png" width="750" />
+        <splash height="2208" platform="ios" src="www/res/screen/ios/Default-736h.png" width="1242" />
+        <splash height="960" platform="ios" src="www/res/screen/ios/Default@2x~iphone.png" width="640" />
+        <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
         <allow-navigation href="https://cryptar.com.ar" />
         <allow-navigation href="https://cryptarchat.cryptar.com.ar" />
         <allow-navigation href="https://*" />
@@ -78,5 +84,4 @@
     <plugin name="cordova-plugin-whitelist" spec="^1.3.4" />
     <plugin name="cordova-plugin-dialogs" spec="^2.0.2" />
     <plugin name="cordova-plugin-keyboard" spec="1.2.0" />
-    <plugin name="cordova-plugin-console" spec="^1.1.0" />
 </widget>
