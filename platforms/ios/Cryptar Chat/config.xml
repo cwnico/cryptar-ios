@@ -63,6 +63,9 @@
     <feature name="Vibration">
         <param name="ios-package" value="CDVVibration" />
     </feature>
+    <feature name="PushbotsPlugin">
+        <param name="ios-package" value="PushbotsPlugin" />
+    </feature>
     <name>Cryptar Chat</name>
     <description>
 		Cryptar - by Sistemas Titanio
@@ -80,12 +83,10 @@
     <allow-intent href="geo:*" />
     <access origin="https://cryptarchat.cryptar.com.ar" />
     <access origin="https://cryptar.com.ar" />
-    <splash height="1136" platform="ios" src="www/res/screen/ios/Default-568h@2x~iphone.png" width="640" />
     <splash height="1334" platform="ios" src="www/res/screen/ios/Default-667h.png" width="750" />
     <splash height="2208" platform="ios" src="www/res/screen/ios/Default-736h.png" width="1242" />
-    <splash height="960" platform="ios" src="www/res/screen/ios/Default@2x~iphone.png" width="640" />
     <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
-    <icon density="mdpi" height="57" platform="ios" src="www/res/icon/ios/icon.png" width="57" />
+    <icon density="mdpi" height="57" platform="ios" src="www/res/icon/ios/Icon.png" width="57" />
     <allow-navigation href="https://cryptar.com.ar" />
     <allow-navigation href="https://cryptarchat.cryptar.com.ar" />
     <allow-navigation href="https://*" />
@@ -115,7 +116,7 @@
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="prerendered-icon" value="true" />
     <preference name="android-minSdkVersion" value="19" />
-    <preference name="phonegap-version" value="cli-8.1.1" />
+    <preference name="phonegap-version" value="cli-9.0.0" />
     <preference name="android-build-tool" value="gradle" />
     <preference name="Fullscreen" value="true" />
     <preference name="StatusBarBackgroundColor" value="#f7f7f8" />

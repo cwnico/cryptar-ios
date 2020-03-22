@@ -11,17 +11,15 @@
     <preference name="prerendered-icon" value="true" />
     <gap:plugin name="pushbots-cordova-plugin" spec="1.6.x" source="npm" />
     <preference name="android-minSdkVersion" value="19" />
-    <preference name="phonegap-version" value="cli-8.1.1" />
+    <preference name="phonegap-version" value="cli-9.0.0" />
     <preference name="android-build-tool" value="gradle" />
     <preference name="Fullscreen" value="true" />
     <preference name="StatusBarBackgroundColor" value="#f7f7f8" />
     <platform name="ios">
-        <splash height="1136" platform="ios" src="www/res/screen/ios/Default-568h@2x~iphone.png" width="640" />
         <splash height="1334" platform="ios" src="www/res/screen/ios/Default-667h.png" width="750" />
         <splash height="2208" platform="ios" src="www/res/screen/ios/Default-736h.png" width="1242" />
-        <splash height="960" platform="ios" src="www/res/screen/ios/Default@2x~iphone.png" width="640" />
         <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
-        <icon src="www/res/icon/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
+        <icon src="www/res/icon/ios/Icon.png" platform="ios" width="57" height="57" density="mdpi" />
         <allow-navigation href="https://cryptar.com.ar" />
         <allow-navigation href="https://cryptarchat.cryptar.com.ar" />
         <allow-navigation href="https://*" />
