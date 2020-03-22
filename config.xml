@@ -16,8 +16,6 @@
     <preference name="Fullscreen" value="true" />
     <preference name="StatusBarBackgroundColor" value="#f7f7f8" />
     <platform name="ios">
-        <splash platform="ios" src="www/res/screen/ios/Default-667h.png" />
-        <icon src="www/res/icon/ios/Icon.png" platform="ios" />
         <allow-navigation href="https://cryptar.com.ar" />
         <allow-navigation href="https://cryptarchat.cryptar.com.ar" />
         <allow-navigation href="https://*" />

@@ -83,8 +83,6 @@
     <allow-intent href="geo:*" />
     <access origin="https://cryptarchat.cryptar.com.ar" />
     <access origin="https://cryptar.com.ar" />
-    <splash platform="ios" src="www/res/screen/ios/Default-667h.png" />
-    <icon platform="ios" src="www/res/icon/ios/Icon.png" />
     <allow-navigation href="https://cryptar.com.ar" />
     <allow-navigation href="https://cryptarchat.cryptar.com.ar" />
     <allow-navigation href="https://*" />
