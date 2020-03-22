@@ -17,8 +17,8 @@
  under the License.
  */
 
-#import <Cordova/CDVPlugin.h>
-#import <Cordova/CDVWebViewEngineProtocol.h>
+#import "CDVPlugin.h"
+#import "CDVWebViewEngineProtocol.h"
 
 @interface CDVUIWebViewEngine : CDVPlugin <CDVWebViewEngineProtocol>
 
