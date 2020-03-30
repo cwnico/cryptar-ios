@@ -252,8 +252,8 @@ $('document').ready(function(){
   socket.on('new message', function(data, callback) {
     obj = JSON.parse(data);
 
-    if(controlFechas(obj.fecha)){
-      return false;
+    if(controlFechas(obj.fecha) == true){
+      return;
     }
 
     if (obj.tipo === 'texto') {
@@ -268,6 +268,9 @@ $('document').ready(function(){
         iv: obj.iv
       };
       mensajeDecriptado = deCryptar(obj.message, objetoClaves);
+      if(mensajeDecriptado == ""){
+        return;
+      }
       if (usuarioactual !== obj.propietario) {
         clase = "." + obj.propietario;
         $(clase).css('display', 'block');
@@ -626,28 +629,34 @@ $('document').ready(function(){
         }
       }
       try{
-        if(controlFechas(field.fecha) == false){
-          var propietariomsj = field.propietario;
-          objetoClaves = {
-            key: window.localStorage.getItem("key"),
-            keyBF: window.localStorage.getItem("keyBF"),
-            iv: field.iv
-          };
-          var mensaje = deCryptar(field.mensaje, objetoClaves);
-          var type;
+        if(controlFechas(field.fecha) == true){
+          return;
+        }
+        var propietariomsj = field.propietario;
+        objetoClaves = {
+          key: window.localStorage.getItem("key"),
+          keyBF: window.localStorage.getItem("keyBF"),
+          iv: field.iv
+        };
+        var mensaje = deCryptar(field.mensaje, objetoClaves);
 
-          if (propietario === propietariomsj) {
-            type = 'sent';
-          } else {
-            type = 'received';
-          }
-          if (mensaje.tipo === "imagen") {
-            addMessage("<strong>IMAGEN ENVIADA</strong>", propietariomsj, type, field.fecha);
-          } else {
-            if($("#" + field.idMessage).length == 0) {
-              addMessage(mensaje, propietariomsj, type, field.fecha);
-              $('.message-'+type+':last-child').attr('id', field.idMessage);
-            }
+        if(mensaje == ""){
+          return;
+        }
+
+        var type;
+
+        if (propietario === propietariomsj) {
+          type = 'sent';
+        } else {
+          type = 'received';
+        }
+        if (mensaje.tipo === "imagen") {
+          addMessage("<strong>IMAGEN ENVIADA</strong>", propietariomsj, type, field.fecha);
+        } else {
+          if($("#" + field.idMessage).length == 0) {
+            addMessage(mensaje, propietariomsj, type, field.fecha);
+            $('.message-'+type+':last-child').attr('id', field.idMessage);
           }
         }
       }catch (e) {
@@ -707,7 +716,7 @@ $('document').ready(function(){
 
       return decryptedText;
     }catch (e) {
-      return "¡ERROR DE LECTURA! - Mensaje Perdido.";
+      return "";
     }
   }
 
