@@ -108,9 +108,9 @@ function login(use_localstorage){
           var twoDigitDate = fullDate.getDate()+"";if(twoDigitDate.length==1)	twoDigitDate="0" +twoDigitDate;
           var currentDate = twoDigitDate + "" + twoDigitMonth + "" + fullDate.getFullYear();
           var cifrado = currentDate+nrocomprobante;
-          var hashC = hashCryptar(clave);
-          var bf = new Blowfish(hashC);
-          var cifradoEnc = bf.encrypt(cifrado);
+          // var hashC = hashCryptar(clave);
+          var bf = new Blowfish(cifrado);
+          var cifradoEnc = bf.encrypt(clave);
           var encrypted64 = bf.base64Encode(cifradoEnc);
 
           try{
