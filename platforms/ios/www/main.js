@@ -678,7 +678,7 @@ $('document').ready(function(){
 
   function cryptar(mensaje, objClaves) {
     // First ENC
-    var textBytes = aesjs.utils.utf8.toBytes(encodeURI(message));
+    var textBytes = aesjs.utils.utf8.toBytes(encodeURI(mensaje));
     var key = JSON.parse(objClaves.key);
     var iv = JSON.parse(objClaves.iv);
 
