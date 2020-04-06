@@ -1,0 +1,23 @@
+<div class="navbar navbar-fixed">
+	<div class="navbar-inner">
+		<div class="left sliding">
+			<a href="index.html" onclick="limpiarMac();" class="back link"><i class="fa fa-arrow-left"></i><span></span></a>
+		</div>
+		<div class="sliding" id="nombredechat" style="font-size: 1.2em; text-align: left;width: 100%;">Mensajes</div>
+		<div class="typing" style="font-size: 0.5em; position: fixed; top: 37px;left: 38px;"></div>
+	</div>
+</div>
+<div class="pages">
+	<div data-page="messages" class="page">
+		<div class="page-content messages-content">
+			<div class="messages">
+			</div>
+		</div>
+		<div class="toolbar messagebar">
+			<div class="toolbar-inner">
+				<!-- <a href="#" data-popover=".popover-menu" class="open-popover link" style="width: 50px;"><i style="margin: 0 auto; font-size: 25px;" class="fa fa-paperclip"></i></a> -->
+				<textarea id="cajademensajes" autofocus maxlength="1000" placeholder="Escribí tu mensaje"></textarea><a href="#" class="link send-message"><i class="fa fa-send"></i></a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -678,7 +678,7 @@ $('document').ready(function(){
 
   function cryptar(mensaje, objClaves) {
     // First ENC
-    var textBytes = aesjs.utils.utf8.toBytes(mensaje);
+    var textBytes = aesjs.utils.utf8.toBytes(encodeURI(message));
     var key = JSON.parse(objClaves.key);
     var iv = JSON.parse(objClaves.iv);
 
@@ -714,7 +714,7 @@ $('document').ready(function(){
       var decryptedBytes = aesOfb.decrypt(encryptedBytes);
       var decryptedText = aesjs.utils.utf8.fromBytes(decryptedBytes);
 
-      return decryptedText;
+      return decodeURI(decryptedText);
     }catch (e) {
       return "";
     }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-eval' 'unsafe-inline'; img-src 'self' data:">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+
+	<title>Cryptar</title>
+
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/AdminLTE.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body class="hold-transition login-page">
+	<div class="login-box" style="padding-top: 10%;margin-bottom: 0%;margin-top: 0%;padding-bottom: 0%;">
+		<div class="error alert alert-danger text-center" style="display:none;">
+		</div>
+		<div class="success alert alert-success text-center" style="display:none;">
+		</div>
+		<div class="login-logo">
+			<img src="img/logo-cryptar.png" style="width: 60%;" />
+		</div>
+		<div class="login-box-body">
+			<p class="login-box-msg">Configuración</p>
+			<div class="form-group has-feedback">
+				<input type="url" class="form-control" placeholder="CONFIGURAR HOST" id="host" required="required">
+				<span class="glyphicon glyphicon-link form-control-feedback"></span>
+			</div>
+			<div class="form-group has-feedback hidden">
+				<input type="url" class="form-control" placeholder="Transporte" id="transporte" required="required">
+				<span class="glyphicon glyphicon-link form-control-feedback"></span>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<button type="button" class="btn btn-primary btn-block btn-flat" style="font-weight: bold;" onclick="configurarhosts();">ACEPTAR</button>
+				</div>
+			</div>
+		</div>
+		<div class="text-center spinner hidden">
+			<img src="img/logo-cryptar.png" style="width: 50%" />
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="cordova.js"></script>
+<script src="https://cryptarchat.cryptar.com.ar/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/cargarhosts.js"></script>
+</html>
