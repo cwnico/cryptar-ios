@@ -56,10 +56,10 @@ $('document').ready(function(){
   for (var i = 0; i < usuarios.length; i++) {
     $$("#usuarios").append('<li id="' + usuarios[i].username + '">' +
       '<a href="messages.html?mac=' + usuarios[i].username + '&apellidonombre=' + usuarios[i].apellidonombre + '" class="item-link item-content">' +
-      '<div class="item-media"><img src="img/icon.png" width="50" /></div>' +
+      '<div class="item-media"><div class="circle-icon">'+usuarios[i].apellidonombre.charAt(0)+'</div></div>' +
       '<div class="item-inner"><div class="item-title">' + usuarios[i].apellidonombre + '</div>' +
-      '<div class="item-after ' + usuarios[i].username + '" style="display: none;">' +
-      '<span class="badge"><i class="fa fa-exclamation"></i></span></div>' +
+      '<div class="item-after ' + usuarios[i].username + '" style="margin-top: -4px;display: none;">' +
+      '<span class="badge"></span></div>' +
       '</div>' +
       '</a>' +
       '</li>');
@@ -273,7 +273,13 @@ $('document').ready(function(){
       }
       if (usuarioactual !== obj.propietario) {
         clase = "." + obj.propietario;
+        identificador = "#" + obj.propietario;
+        $("#usuarios li:eq(0)").before($( identificador ));
+
+        msjs = $(clase+" .badge").html() == '' ? 1 : parseInt($(clase+" .badge").html()) + 1;
+        $(clase+" .badge").html(msjs);
         $(clase).css('display', 'block');
+
         myApp.addNotification({
           title: obj.propietario,
           message: mensajeDecriptado,
