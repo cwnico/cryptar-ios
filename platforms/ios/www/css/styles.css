@@ -187,3 +187,39 @@ input {
     text-align: center;
     line-height: 1em;
 }
+
+.login-page .login-box-body, .login-page .register-box-body {
+    background: transparent;
+}
+
+.login-page .form-control{
+    color: white;
+    border-bottom: 1px solid white !important;
+    border: none;
+    border-radius: unset;
+    background: transparent;
+}
+
+.login-page .btn-primary {
+    color: #16152a;
+    background-color: #00aeef;
+    line-height: 2.3em;
+}
+
+.login-page a {
+    color: white;
+    text-transform: uppercase;
+    font-size: .9em;
+}
+
+.login-box-body .form-control-feedback, .register-box-body .form-control-feedback {
+    color: #00aeef;
+}
+
+.login-page .form-control-feedback {
+    left: 0 !important;
+}
+
+.login-page .has-feedback .form-control {
+    padding-left: 42.5px;
+}

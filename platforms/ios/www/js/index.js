@@ -65,9 +65,11 @@ function loginSecond(cifradoEnc, clave){
           window.location.href="./inicio.html";
         }catch(err){
           $('.error').html(err.message).fadeIn().fadeOut(4000);
+          $('.spinner').addClass('hidden');
         }
       }else{
         $('.error').html(data.respuesta).fadeIn().fadeOut(2000);
+        $('.spinner').addClass('hidden');
       }
     },
     fail: function (datahost) {

@@ -6,6 +6,21 @@ var myApp = new Framework7({
   swipeBackPage: false
 });
 
+var colorUsuario = [
+  '#fd9e06',
+  '#ff4499',
+  '#7dd5d5',
+  '#be3b49',
+  '#a350fe',
+  '#37cd93',
+  '#01aced',
+  '#375ecd',
+  '#596996',
+  '#3cbbbb',
+  '#e81b78',
+  '#ce4214'
+];
+
 var mostrardia = false;
 var tapped = false;
 var ultimaRed = '';
@@ -56,7 +71,7 @@ $('document').ready(function(){
   for (var i = 0; i < usuarios.length; i++) {
     $$("#usuarios").append('<li id="' + usuarios[i].username + '">' +
       '<a href="messages.html?mac=' + usuarios[i].username + '&apellidonombre=' + usuarios[i].apellidonombre + '" class="item-link item-content">' +
-      '<div class="item-media"><div class="circle-icon">'+usuarios[i].apellidonombre.charAt(0)+'</div></div>' +
+      '<div class="item-media"><div class="circle-icon" style="background: '+colorUsuario[i]+'">'+usuarios[i].apellidonombre.charAt(0)+'</div></div>' +
       '<div class="item-inner"><div class="item-title">' + usuarios[i].apellidonombre + '</div>' +
       '<div class="item-after ' + usuarios[i].username + '" style="margin-top: -4px;display: none;">' +
       '<span class="badge"></span></div>' +
@@ -209,9 +224,17 @@ $('document').ready(function(){
     return month[date.split("-")[1]] + " " + date.split("-")[0] + " de " + (date.split("-")[2]).split(" ")[0];
   }
 
+  function nl2br (str, is_xhtml) {
+    if (typeof str === 'undefined' || str === null) {
+      return '';
+    }
+    var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
+    return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
+  }
+
   function addMessage(text, name, type, date) {
     myMessages.addMessage({
-      text: text,
+      text: nl2br(text),
       name: name,
       type: type,
       date: (typeof date !== 'undefined') ? date.split(" ")[1] : '',
