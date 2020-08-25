@@ -1,0 +1,225 @@
+.statusbar-overlay {
+    background: #000000;
+}
+
+.tituloapp {
+    margin: 0px auto;
+    margin-top: .4em;
+}
+
+.tituloapp img{
+    width: 12em;
+}
+
+a {
+    cursor: pointer;
+}
+
+.message-name{
+    display: none !important;
+}
+.message-received >	 .message-text > .message-date,
+.message-sent >	 .message-text > .message-date{
+    text-align: right;
+    font-size: 0.7em;
+    font-style: italic;
+}
+.hidden {
+    display: none !important;
+}
+.spinner
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: none repeat scroll 0 0  #16152a;
+}
+*:not(input,textarea) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+input {
+    -webkit-user-select: auto !important;
+}
+
+* {
+    -webkit-user-select: text;
+}
+
+.login-page,
+.register-page {
+    background: #16152a !important;
+}
+
+.link.send-message{
+    height: 100% !important;
+    display: contents;
+}
+
+#toolbar-navigation .toolbar-inner .tab-link.active i, .link.send-message {
+    /*color: #d9534f;*/
+    color: #00acec;
+}
+
+.link.send-message i{
+    font-size: 1.3em;
+}
+
+#toolbar-navigation .toolbar-inner .tab-link, #toolbar-navigation .toolbar-inner .tab-link i, #toolbar-navigation .toolbar-inner .tab-link span, a i{
+    color: white;
+}
+
+.navbar.navbar-fixed, .toolbar.tabbar, .searchbar.searchbar-init, #tab2 .navbar{
+    background: #16152a;
+}
+
+#usuarios, .page-content, .list-block ul:before, .list-block ul:after, .toolbar.messagebar .toolbar-inner, .toolbar:before, .navbar:after, .navbar:before, .searchbar:after {
+    background: #1a2750;
+}
+
+.page-content .content-block p, #usuarios{
+    color: white;
+}
+
+.page-content .content-block p{
+    font-size: 1.7em;
+}
+
+.navbar-inner.navbar-on-center, #cajademensajes{
+    color: white;
+}
+
+.message-sent .message-text {
+    background-color: #00aeef !important;
+}
+
+.messagebar textarea + .link {
+    margin: 0px 8px !important;
+}
+
+#cajademensajes{
+    background: #125080;
+    border: none;
+}
+.messagebar textarea{
+    line-height: 23px !important;
+    padding: 12px 8px !important;
+    min-height: 2.6em !important;
+}
+
+#tab1 .list-block .item-link .item-inner{
+    background: unset;
+}
+
+#tab1 .list-block ul .item-inner {
+    padding: 1.3em 1em;
+}
+
+#tab1 .list-block ul .item-media {
+    display: block;
+}
+
+.item-link.item-content .item-media i{
+    color: #01a9e9;
+}
+
+.navbar-fixed .page > .searchbar, .navbar-through .page > .searchbar, .navbar-fixed > .searchbar, .navbar-through > .searchbar {
+    top: 53px !important;
+}
+
+.item-after .badge
+{
+    background: #01a9e9;
+}
+
+#tab2 .list-block {
+    font-size: 1.5em;
+    margin: .1em 0em;
+}
+
+#tab2 .list-block .item-inner:after{
+    height: 0px;
+}
+
+#tab2 .list-block ul {
+    background: transparent;
+}
+#tab2 .list-block li {
+    border-bottom: .1em solid #c9c8ce75;
+    padding: 0.8em 0em;
+}
+
+#tab2 .list-block ul .item-inner {
+    color: white;
+    font-size: 1em;
+    background-image: unset;
+    margin-left: 1em;
+}
+
+#tab2 .list-block ul .item-media {
+    color:#125080;
+}
+
+.circle-icon {
+    background: #039bd5;
+    padding: 8px 9px;
+    border-radius: 1em;
+    font-size: 1.4em;
+    font-weight: 600;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    line-height: 1em;
+}
+
+.login-page .login-box-body, .login-page .register-box-body {
+    background: transparent;
+}
+
+.login-page .form-control{
+    color: white;
+    border-bottom: 1px solid white !important;
+    border: none;
+    border-radius: unset;
+    background: transparent;
+}
+
+.login-page .btn-primary {
+    color: #16152a;
+    background-color: #00aeef;
+    line-height: 2.3em;
+}
+
+.login-page a {
+    color: white;
+    text-transform: uppercase;
+    font-size: .9em;
+}
+
+.login-box-body .form-control-feedback, .register-box-body .form-control-feedback {
+    color: #00aeef;
+}
+
+.login-page .form-control-feedback {
+    left: 0 !important;
+}
+
+.login-page .has-feedback .form-control {
+    padding-left: 42.5px;
+}

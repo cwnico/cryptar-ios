@@ -1,14 +1,19 @@
-var host = window.localStorage.getItem('host');
-var device;
-var uuid;
+let host = window.localStorage.getItem('host');
+let device;
+let uuid;
 
 function controlhost(){
-  host = window.localStorage.getItem('host');
-  if(host === null || host === 'false'){
-    window.localStorage.setItem('host', 'false');
-    window.location.href="./cargarhosts.html";
+  if(parameters.production){
+    host = window.localStorage.getItem('host');
+    if(host === null || host === "false"){
+      window.localStorage.setItem('host', false);
+      window.location.href="./cargarhosts.html";
+    }
+    host = window.localStorage.getItem('host');
+  }else{
+    host = parameters.hostdev;
+    window.localStorage.setItem('host', parameters.hostdev);
   }
-  host = window.localStorage.getItem('host');
 }
 
 function controlLogin() {
@@ -140,8 +145,6 @@ function login(use_localstorage){
 $('document').ready(function(){
   controlhost();
   controlLogin();
-
-
 });
 
 function onDeviceReady() {

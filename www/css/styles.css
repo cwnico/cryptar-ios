@@ -223,3 +223,8 @@ input {
 .login-page .has-feedback .form-control {
     padding-left: 42.5px;
 }
+.list-block .item-link.list-button {
+    color: grey;
+    font-weight: bold;
+    text-transform: uppercase;
+}

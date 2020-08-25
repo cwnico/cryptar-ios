@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.cryptar.titanio" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Cryptar Chat</name>
+    <description>
+		Cryptar - by Sistemas Titanio
+    </description>
+    <author email="info@sistemastitanio.com.ar" href="http://sistemastitanio.com.ar">
+        Sistemas Titanio
+    </author>
+    <content src="index.html" />
+    <gap:plugin name="pushbots-cordova-plugin" source="npm" spec="1.6.12" />
+    <allow-navigation href="http://*" />
+    <allow-navigation href="https://*" />
+    <allow-navigation href="http://localhost" />
+    <allow-intent href="https://*" />
+    <allow-intent href="http://localhost" />
+    <allow-intent href="wss:*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <access origin="https://cryptarchat.cryptar.com.ar" />
+    <access origin="https://cryptar.com.ar" />
+    <access origin="*" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="android-minSdkVersion" value="19" />
+    <preference name="phonegap-version" value="cli-8.1.1" />
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="StatusBarBackgroundColor" value="#f7f7f8" />
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+    <preference name="iosPersistentFileLocation" value="Library" />
+    <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="KeyboardShrinksView" value="true" />
+</widget>
