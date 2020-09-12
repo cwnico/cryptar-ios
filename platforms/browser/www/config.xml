@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.cryptar.titanio" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.cryptar.titanio" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Cryptar Chat</name>
     <description>
 		Cryptar - by Sistemas Titanio
@@ -21,6 +21,7 @@
     <access origin="https://cryptarchat.cryptar.com.ar" />
     <access origin="https://cryptar.com.ar" />
     <access origin="*" />
+    <preference name="iosPersistentFileLocation" value="Library" />
     <preference name="prerendered-icon" value="true" />
     <preference name="android-minSdkVersion" value="19" />
     <preference name="phonegap-version" value="cli-8.1.1" />
@@ -28,7 +29,6 @@
     <preference name="Fullscreen" value="true" />
     <preference name="StatusBarBackgroundColor" value="#f7f7f8" />
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
-    <preference name="iosPersistentFileLocation" value="Library" />
     <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
     <preference name="exit-on-suspend" value="false" />
     <preference name="KeyboardShrinksView" value="true" />

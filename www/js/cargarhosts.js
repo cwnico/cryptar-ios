@@ -15,7 +15,7 @@ function configurarhosts() {
 			if(parameters.production){
 				window.localStorage.setItem('host', $.trim($('#host').val()));
 				host = $.trim($('#host').val());
-				hostnode = "https://cryptarchat." + host;
+						hostnode = "https://cryptarchat." + host.replace('https://', '');
 			}else{
 				window.localStorage.setItem('host', parameters.hostdev);
 				host = parameters.hostdev;

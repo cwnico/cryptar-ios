@@ -1,15 +1,26 @@
-$('document').ready(function(){
-	var host = (localStorage.getItem('host') === 'false' ? '' : window.localStorage.getItem('host'));
+let host, hostnode;
+
+if(parameters.production){
+	host = (localStorage.getItem('host') === 'false' ? '' : window.localStorage.getItem('host'));
 	$('#host').val(host);
-});
+}else{
+	$('#host').val(parameters.hostdev);
+}
 
 function configurarhosts() {
 	try {
 		if ($.trim($('#host').val()) !== '') {
 			$('.btn-danger').attr('disabled', 'disabled');
 
-			window.localStorage.setItem('host', $.trim($('#host').val()));
-			var host = $.trim($('#host').val());
+			if(parameters.production){
+				window.localStorage.setItem('host', $.trim($('#host').val()));
+				host = $.trim($('#host').val());
+						hostnode = "https://cryptarchat." + host.replace('https://', '');
+			}else{
+				window.localStorage.setItem('host', parameters.hostdev);
+				host = parameters.hostdev;
+				hostnode = parameters.hostnodedev + ':' + parameters.portdev;
+			}
 
 			$.ajax({
 				type: 'get',
@@ -17,8 +28,8 @@ function configurarhosts() {
 				success: function ( datahost ) {
 					$('.success').html("CONTROL 1 de 2: OK.").fadeIn().fadeOut(2000);
 					host = host.replace(/(^\w+:|^)\/\//, '');
-					var socket = io("https://cryptarchat." + host);
-					// var socket = io("http://127.0.0.1:50000");
+
+					var socket = io(hostnode);
 
 					try {
 						socket.on('connect', function () {

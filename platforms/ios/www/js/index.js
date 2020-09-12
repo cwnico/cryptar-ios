@@ -1,14 +1,20 @@
-var host = window.localStorage.getItem('host');
-var device;
-var uuid;
+let host = window.localStorage.getItem('host');
+let device;
+let uuid;
 
 function controlhost(){
-  host = window.localStorage.getItem('host');
-  if(host === null || host === 'false'){
-    window.localStorage.setItem('host', 'false');
-    window.location.href="./cargarhosts.html";
+  if(parameters.production){
+    console.log("PASO X ACA");
+    host = window.localStorage.getItem('host');
+    if(host === null || host === "false"){
+      window.localStorage.setItem('host', false);
+      window.location.href="./cargarhosts.html";
+    }
+    host = window.localStorage.getItem('host');
+  }else{
+    host = parameters.hostdev;
+    window.localStorage.setItem('host', parameters.hostdev);
   }
-  host = window.localStorage.getItem('host');
 }
 
 function controlLogin() {
@@ -17,6 +23,9 @@ function controlLogin() {
   }else{
     var nombreUsuario = window.localStorage.getItem('nombreUsuario') ? window.localStorage.getItem('nombreUsuario') : '';
     var claveUsuario = window.localStorage.getItem('claveUsuario') ? window.localStorage.getItem('claveUsuario') : '';
+
+    console.log("Usuario: "+nombreUsuario);
+    console.log("Clave: "+claveUsuario);
 
     if(nombreUsuario !== '' && claveUsuario !== ''){
       $('#nombreusuario').text(nombreUsuario);
@@ -81,8 +90,8 @@ function loginSecond(cifradoEnc, clave){
 
 function login(use_localstorage){
   try{
-
     if(use_localstorage){
+      console.log("ENTRO"+use_localstorage);
       var nombreusuario = window.localStorage.getItem('nombreUsuario') ? window.localStorage.getItem('nombreUsuario') : '';
       var clave = window.localStorage.getItem('claveUsuario') ? window.localStorage.getItem('claveUsuario') : '';
     }else{
@@ -90,7 +99,10 @@ function login(use_localstorage){
       var clave = $('#password').val();
     }
 
-    $('.spinner').removeClass('hidden');
+    console.log("Usuario QUE TOMA: "+nombreusuario);
+    console.log("Clave QUE TOMA: "+clave);
+
+    // $('.spinner').removeClass('hidden');
 
     // var usuarioprincipal = window.localStorage.getItem('usuarioprincipal');
     // if(usuarioprincipal !== null && usuarioprincipal !== nombreusuario){
@@ -140,8 +152,6 @@ function login(use_localstorage){
 $('document').ready(function(){
   controlhost();
   controlLogin();
-
-
 });
 
 function onDeviceReady() {

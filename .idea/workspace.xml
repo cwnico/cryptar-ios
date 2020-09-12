@@ -1,9 +1,612 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7bd362c9-023e-4d3a-8604-dd06c109dbda" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-compat/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-compat/.github/PULL_REQUEST_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-compat/.jshintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-compat/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-compat/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-compat/RELEASENOTES.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-compat/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-compat/plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-compat/src/android/BuildHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-compat/src/android/PermissionHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/RELEASENOTES.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/RELEASENOTES.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/de/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/de/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/de/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/es/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/es/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/es/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/fr/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/fr/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/fr/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/it/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/it/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/it/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/ja/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/ja/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/ja/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/ko/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/ko/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/ko/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/pl/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/pl/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/pl/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/ru/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/ru/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/zh/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/zh/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/doc/zh/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/android/AssetFilesystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/android/AssetFilesystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/android/ContentFilesystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/android/ContentFilesystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/android/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/android/FileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/android/LocalFilesystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/android/LocalFilesystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/android/PermissionHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/blackberry10/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/browser/FileProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/browser/FileProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/firefoxos/FileProxy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/ios/CDVFile.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/ios/CDVFile.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/ios/CDVFile.m" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/ios/CDVFile.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/ios/CDVLocalFilesystem.m" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/ios/CDVLocalFilesystem.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/ubuntu/file.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/ubuntu/file.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/windows/FileProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/windows/FileProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/src/wp/File.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/tests/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/tests/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/tests/src/android/TestContentProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/tests/src/android/TestContentProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/tests/tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/tests/tests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/DirectoryEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/DirectoryEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/DirectoryReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/DirectoryReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/Entry.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/Entry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/File.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/File.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/FileEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/FileEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/FileError.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/FileError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/FileReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/FileReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/FileUploadOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/FileUploadOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/FileUploadResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/FileUploadResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/FileWriter.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/FileWriter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/Flags.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/Flags.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/Metadata.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/Metadata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/ProgressEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/ProgressEvent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/android/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/android/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/FileProxy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/FileSystem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/copyTo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/createEntryFromNative.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/getDirectory.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/getFile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/getFileMetadata.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/getMetadata.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/getParent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/info.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/moveTo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/readAsArrayBuffer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/readAsBinaryString.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/readAsDataURL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/readAsText.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/readEntries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/remove.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/removeRecursively.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/requestAllFileSystems.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/requestAnimationFrame.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/requestFileSystem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/resolveLocalFileSystemURI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/setMetadata.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/truncate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/blackberry10/write.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/browser/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/browser/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/browser/Preparing.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/browser/Preparing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/browser/isChrome.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/browser/isChrome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/fileSystemPaths.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/fileSystemPaths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/fileSystems-roots.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/fileSystems-roots.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/fileSystems.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/fileSystems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/firefoxos/FileSystem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/ios/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/ios/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/osx/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/osx/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/requestFileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/requestFileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/resolveLocalFileSystemURI.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/resolveLocalFileSystemURI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/ubuntu/FileSystem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/ubuntu/FileWriter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/ubuntu/fileSystems-roots.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-file/www/wp/FileUploadOptions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/.github/PULL_REQUEST_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/.jshintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/RELEASENOTES.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/RELEASENOTES.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/doc/de/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/doc/de/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/doc/es/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/doc/es/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/doc/fr/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/doc/fr/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/doc/it/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/doc/it/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/doc/ja/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/doc/ja/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/doc/ko/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/doc/ko/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/doc/pl/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/doc/pl/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/doc/ru/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/doc/zh/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/doc/zh/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/android/Capture.java" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/android/Capture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/android/PendingRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/android/PendingRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/blackberry10/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/browser/CaptureProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/browser/CaptureProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/ios/CDVCapture.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/ios/CDVCapture.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/ios/CDVCapture.m" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/ios/CDVCapture.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/ubuntu/MediaCaptureWidget.qml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/ubuntu/back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/ubuntu/capture.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/ubuntu/capture.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/ubuntu/microphone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/ubuntu/record_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/ubuntu/record_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/ubuntu/shoot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/ubuntu/toolbar-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/ubuntu/toolbar-middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/ubuntu/toolbar-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/windows/CaptureProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/windows/CaptureProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/windows/MediaFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/windows/MediaFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/wp/Capture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/wp/UI/AudioCaptureTask.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/wp/UI/AudioRecorder.xaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/wp/UI/AudioRecorder.xaml.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/wp/UI/VideoCaptureTask.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/wp/UI/VideoRecorder.xaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/src/wp/UI/VideoRecorder.xaml.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/tests/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/tests/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/tests/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/tests/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/tests/tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/tests/tests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/types/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/CaptureAudioOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/CaptureAudioOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/CaptureError.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/CaptureError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/CaptureImageOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/CaptureImageOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/CaptureVideoOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/CaptureVideoOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/ConfigurationData.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/ConfigurationData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/MediaFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/MediaFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/MediaFileData.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/MediaFileData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/android/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/android/init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/capture.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/capture.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-plugin-media-capture/www/helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/browser.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/browser.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/cordova_plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/cordova_plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/src/browser/FileProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/src/browser/FileProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/DirectoryEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/DirectoryEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/DirectoryReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/DirectoryReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/Entry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/Entry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/File.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/File.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/FileEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/FileEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/FileError.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/FileError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/FileReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/FileReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/FileUploadOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/FileUploadOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/FileUploadResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/FileUploadResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/FileWriter.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/FileWriter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/Flags.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/Flags.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/Metadata.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/Metadata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/ProgressEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/ProgressEvent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/browser/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/browser/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/browser/Preparing.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/browser/Preparing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/browser/isChrome.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/browser/isChrome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/fileSystemPaths.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/fileSystemPaths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/fileSystems.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/fileSystems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/requestFileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/requestFileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/src/browser/CaptureProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/src/browser/CaptureProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/www/CaptureError.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/www/CaptureError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/www/CaptureImageOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/www/CaptureImageOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/www/CaptureVideoOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/www/CaptureVideoOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/www/MediaFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/www/MediaFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/www/MediaFileData.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/www/MediaFileData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/www/capture.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/www/capture.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/www/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/plugins/cordova-plugin-media-capture/www/helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/cargarhosts.html" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/cargarhosts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/cordova_plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/cordova_plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/inicio.html" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/inicio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/js/cargarhosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/js/cargarhosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/js/parametros.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/js/parametros.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/messages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/src/browser/FileProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/src/browser/FileProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/DirectoryEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/DirectoryEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/DirectoryReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/DirectoryReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/Entry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/Entry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/File.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/File.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/FileEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/FileEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/FileError.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/FileError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/FileReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/FileReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/FileUploadOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/FileUploadOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/FileUploadResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/FileUploadResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/FileWriter.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/FileWriter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/Flags.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/Flags.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/Metadata.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/Metadata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/ProgressEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/ProgressEvent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/browser/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/browser/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/browser/Preparing.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/browser/Preparing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/browser/isChrome.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/browser/isChrome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/fileSystemPaths.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/fileSystemPaths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/fileSystems.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/fileSystems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/requestFileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/requestFileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/src/browser/CaptureProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/src/browser/CaptureProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/www/CaptureError.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/www/CaptureError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/www/CaptureImageOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/www/CaptureImageOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/www/CaptureVideoOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/www/CaptureVideoOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/www/MediaFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/www/MediaFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/www/MediaFileData.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/www/MediaFileData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/www/capture.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/www/capture.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/www/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/plugins/cordova-plugin-media-capture/www/helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/Cryptar Chat.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/Cryptar Chat.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/Cryptar Chat/Cryptar Chat-Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/Cryptar Chat/Cryptar Chat-Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/Cryptar Chat/Plugins/cordova-plugin-file/CDVFile.h" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/Cryptar Chat/Plugins/cordova-plugin-file/CDVFile.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/Cryptar Chat/Plugins/cordova-plugin-file/CDVFile.m" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/Cryptar Chat/Plugins/cordova-plugin-file/CDVFile.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/Cryptar Chat/Plugins/cordova-plugin-file/CDVLocalFilesystem.m" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/Cryptar Chat/Plugins/cordova-plugin-file/CDVLocalFilesystem.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/Cryptar Chat/Plugins/cordova-plugin-media-capture/CDVCapture.h" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/Cryptar Chat/Plugins/cordova-plugin-media-capture/CDVCapture.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/Cryptar Chat/Plugins/cordova-plugin-media-capture/CDVCapture.m" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/Cryptar Chat/Plugins/cordova-plugin-media-capture/CDVCapture.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/Cryptar Chat/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/Cryptar Chat/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/Podfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/cordova/node_modules/semver/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/cordova/node_modules/semver/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/ios.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/ios.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/cordova_plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/cordova_plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/DirectoryEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/DirectoryEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/DirectoryReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/DirectoryReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/Entry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/Entry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/File.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/File.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/FileEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/FileEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/FileError.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/FileError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/FileReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/FileReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/FileUploadOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/FileUploadOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/FileUploadResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/FileUploadResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/FileWriter.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/FileWriter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/Flags.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/Flags.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/Metadata.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/Metadata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/ProgressEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/ProgressEvent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/browser/isChrome.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/browser/isChrome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/fileSystemPaths.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/fileSystemPaths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/fileSystems-roots.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/fileSystems-roots.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/fileSystems.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/fileSystems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/ios/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/ios/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/requestFileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/requestFileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-media-capture/www/CaptureError.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-media-capture/www/CaptureError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-media-capture/www/CaptureImageOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-media-capture/www/CaptureImageOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-media-capture/www/CaptureVideoOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-media-capture/www/CaptureVideoOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-media-capture/www/MediaFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-media-capture/www/MediaFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-media-capture/www/MediaFileData.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-media-capture/www/MediaFileData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-media-capture/www/capture.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-media-capture/www/capture.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-media-capture/www/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/platform_www/plugins/cordova-plugin-media-capture/www/helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/cargarhosts.html" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/cargarhosts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/cordova_plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/cordova_plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/inicio.html" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/inicio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/js/cargarhosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/js/cargarhosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/js/parametros.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/js/parametros.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/messages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/DirectoryEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/DirectoryEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/DirectoryReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/DirectoryReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/Entry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/Entry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/File.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/File.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/FileEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/FileEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/FileError.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/FileError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/FileReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/FileReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/FileUploadOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/FileUploadOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/FileUploadResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/FileUploadResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/FileWriter.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/FileWriter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/Flags.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/Flags.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/Metadata.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/Metadata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/ProgressEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/ProgressEvent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/browser/isChrome.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/browser/isChrome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/fileSystemPaths.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/fileSystemPaths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/fileSystems-roots.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/fileSystems-roots.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/fileSystems.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/fileSystems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/ios/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/ios/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/requestFileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/requestFileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-media-capture/www/CaptureError.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-media-capture/www/CaptureError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-media-capture/www/CaptureImageOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-media-capture/www/CaptureImageOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-media-capture/www/CaptureVideoOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-media-capture/www/CaptureVideoOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-media-capture/www/MediaFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-media-capture/www/MediaFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-media-capture/www/MediaFileData.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-media-capture/www/MediaFileData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-media-capture/www/capture.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-media-capture/www/capture.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-media-capture/www/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/cordova-plugin-media-capture/www/helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-compat/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-compat/.github/PULL_REQUEST_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-compat/.jshintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-compat/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-compat/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-compat/RELEASENOTES.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-compat/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-compat/plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-compat/src/android/BuildHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-compat/src/android/PermissionHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/RELEASENOTES.md" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/RELEASENOTES.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/de/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/de/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/de/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/es/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/es/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/es/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/fr/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/fr/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/fr/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/it/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/it/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/it/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/ja/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/ja/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/ja/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/ko/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/ko/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/ko/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/pl/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/pl/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/pl/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/ru/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/ru/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/zh/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/zh/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/doc/zh/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/android/AssetFilesystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/android/AssetFilesystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/android/ContentFilesystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/android/ContentFilesystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/android/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/android/FileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/android/LocalFilesystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/android/LocalFilesystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/android/PermissionHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/blackberry10/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/browser/FileProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/browser/FileProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/firefoxos/FileProxy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/ios/CDVFile.h" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/ios/CDVFile.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/ios/CDVFile.m" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/ios/CDVFile.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/ios/CDVLocalFilesystem.m" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/ios/CDVLocalFilesystem.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/ubuntu/file.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/ubuntu/file.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/windows/FileProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/windows/FileProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/src/wp/File.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/tests/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/tests/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/tests/src/android/TestContentProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/tests/src/android/TestContentProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/tests/tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/tests/tests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/DirectoryEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/DirectoryEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/DirectoryReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/DirectoryReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/Entry.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/Entry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/File.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/File.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/FileEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/FileEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/FileError.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/FileError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/FileReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/FileReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/FileUploadOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/FileUploadOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/FileUploadResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/FileUploadResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/FileWriter.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/FileWriter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/Flags.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/Flags.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/Metadata.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/Metadata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/ProgressEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/ProgressEvent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/android/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/android/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/FileProxy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/FileSystem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/copyTo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/createEntryFromNative.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/getDirectory.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/getFile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/getFileMetadata.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/getMetadata.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/getParent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/info.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/moveTo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/readAsArrayBuffer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/readAsBinaryString.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/readAsDataURL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/readAsText.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/readEntries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/remove.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/removeRecursively.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/requestAllFileSystems.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/requestAnimationFrame.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/requestFileSystem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/resolveLocalFileSystemURI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/setMetadata.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/truncate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/blackberry10/write.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/browser/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/browser/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/browser/Preparing.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/browser/Preparing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/browser/isChrome.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/browser/isChrome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/fileSystemPaths.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/fileSystemPaths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/fileSystems-roots.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/fileSystems-roots.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/fileSystems.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/fileSystems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/firefoxos/FileSystem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/ios/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/ios/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/osx/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/osx/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/requestFileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/requestFileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/ubuntu/FileSystem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/ubuntu/FileWriter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/ubuntu/fileSystems-roots.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-file/www/wp/FileUploadOptions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/.github/PULL_REQUEST_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/.jshintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/RELEASENOTES.md" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/RELEASENOTES.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/doc/de/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/doc/de/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/doc/es/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/doc/es/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/doc/fr/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/doc/fr/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/doc/it/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/doc/it/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/doc/ja/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/doc/ja/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/doc/ko/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/doc/ko/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/doc/pl/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/doc/pl/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/doc/ru/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/doc/zh/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/doc/zh/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/android/Capture.java" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/android/Capture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/android/PendingRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/android/PendingRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/blackberry10/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/browser/CaptureProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/browser/CaptureProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/ios/CDVCapture.h" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/ios/CDVCapture.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/ios/CDVCapture.m" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/ios/CDVCapture.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/ubuntu/MediaCaptureWidget.qml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/ubuntu/back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/ubuntu/capture.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/ubuntu/capture.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/ubuntu/microphone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/ubuntu/record_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/ubuntu/record_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/ubuntu/shoot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/ubuntu/toolbar-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/ubuntu/toolbar-middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/ubuntu/toolbar-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/windows/CaptureProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/windows/CaptureProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/windows/MediaFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/windows/MediaFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/wp/Capture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/wp/UI/AudioCaptureTask.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/wp/UI/AudioRecorder.xaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/wp/UI/AudioRecorder.xaml.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/wp/UI/VideoCaptureTask.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/wp/UI/VideoRecorder.xaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/src/wp/UI/VideoRecorder.xaml.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/tests/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/tests/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/tests/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/tests/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/tests/tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/tests/tests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/types/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/CaptureError.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/CaptureError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/CaptureImageOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/CaptureImageOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/CaptureVideoOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/CaptureVideoOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/ConfigurationData.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/ConfigurationData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/MediaFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/MediaFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/MediaFileData.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/MediaFileData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/android/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/android/init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/capture.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/capture.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media-capture/www/helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/fetch.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/fetch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/cargarhosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/cargarhosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/parametros.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/parametros.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/main.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hQTHZH8uvQhdhbVkVumMn0S5E8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7bd362c9-023e-4d3a-8604-dd06c109dbda" name="Default Changelist" comment="" />
+      <created>1599942228969</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599942228969</updated>
+      <workItem from="1599942230036" duration="4110000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="411" y="80" width="714" height="664" key="find.popup" timestamp="1599945432305">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="411" y="80" width="714" height="664" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1599945432305" />
+    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1599945124142">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1599945124142" />
   </component>
   <component name="masterDetails">
     <states>

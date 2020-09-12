@@ -176,7 +176,8 @@ $('document').ready(function(){
         propietario: propietario,
         destinatario: destinatario,
         idMessage: idMessage,
-        iv: iv
+        iv: iv,
+        iv2: iv,
       };
 
       // TODO: Reenviar mensajes en cola de espera. Aca solo se guardan.
@@ -255,7 +256,7 @@ $('document').ready(function(){
 
   function addMessageImage(url, name, type, date) {
     myMessages.addMessage({
-      text: "<img src='"+url+"'>",
+      text: "<img src='https://"+host+"/"+url+"'>",
       name: name,
       type: type,
       date: (typeof date !== 'undefined') ? date.split(" ")[1] : '',
@@ -326,6 +327,7 @@ $('document').ready(function(){
         'mensaje': obj.message,
         'tipo': obj.tipo,
         'iv': obj.iv,
+        'iv2': obj.iv2,
         'idMessage': obj.idMessage,
         'registrationId': obj.registrationId
       };
@@ -452,8 +454,8 @@ $('document').ready(function(){
       $("#tituloapp").css('display', 'none');
       $("#toolbar-navigation").addClass('hidden');
 
-      // pictureSource = navigator.camera.PictureSourceType;
-      // destinationType = navigator.camera.DestinationType;
+      pictureSource = navigator.camera.PictureSourceType;
+      destinationType = navigator.camera.DestinationType;
     }
 
     if (ultimaRed !== navigator.connection.type) {
@@ -512,8 +514,8 @@ $('document').ready(function(){
     $('#toolbar-navigation').removeClass('hidden');
   });
 
-
   myApp.onPageInit('messages', function(page) {
+
     usuarioactual = page.query.mac;
     let apellidonombre = page.query.apellidonombre;
 
@@ -713,6 +715,7 @@ $('document').ready(function(){
       'tipo': tipomensaje,
       'mensaje': mensajeEncriptado,
       'iv': iv,
+      'iv2': iv2,
       'idMessage': idMessage,
       'registrationId': window.localStorage.getItem('token')
     };
@@ -730,24 +733,42 @@ $('document').ready(function(){
     // $('.message-sent:last-child').attr('id', idMessage).append('<div class="message-label"><i class="fa fa-clock-o"></i></div>');
 
     if($("#" + idMessage).length === 0) {
-      addMessage(messageText, propietario, 'sent', mensajeobj.fecha);
+      if (tipomensaje === "imagen"){
+        addMessageImage(messageText, propietario, 'sent', mensajeobj.fecha);
+      }else{
+        addMessage(messageText, propietario, 'sent', mensajeobj.fecha);
+      }
       $('.message-sent:last-child').attr('id', idMessage).append('<div class="message-label"></div>');
     }
   }
 
   function prepararImagen(imagenDATA) {
-    $.ajax({
-      type: 'post',
-      url: host+"/upload_image",
-      data: {file: imagenDATA},
-      success: function ( data ) {
-        if(data.response !== ''){
-          prepararMensaje(data.response, "imagen");
+    try{
+      myApp.showPreloader();
+      console.log(imagenDATA);
+      console.log(host);
+      setTimeout(function () {
+        myApp.hidePreloader();
+      }, 2000);
+
+      $.ajax({
+        type: 'post',
+        url: "https://" + host + "/upload_image",
+        data: {file: imagenDATA},
+        success: function ( data ) {
+          console.log(data);
+          if(data.response !== ''){
+            console.log("IMAGEN ENVIADA: "+ data.response);
+            prepararMensaje(data.response, "imagen");
+          }
+        },
+        fail: function ( data ) {
+          console.log(data);
         }
-      },
-      fail: function (datahost) {
-      }
-    });
+      });
+    }catch(e){
+      console.log(e.message);
+    }
   }
 
 
