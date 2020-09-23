@@ -4,7 +4,6 @@ let uuid;
 
 function controlhost(){
   if(parameters.production){
-    console.log("PASO X ACA");
     host = window.localStorage.getItem('host');
     if(host === null || host === "false"){
       window.localStorage.setItem('host', false);
@@ -23,9 +22,6 @@ function controlLogin() {
   }else{
     var nombreUsuario = window.localStorage.getItem('nombreUsuario') ? window.localStorage.getItem('nombreUsuario') : '';
     var claveUsuario = window.localStorage.getItem('claveUsuario') ? window.localStorage.getItem('claveUsuario') : '';
-
-    console.log("Usuario: "+nombreUsuario);
-    console.log("Clave: "+claveUsuario);
 
     if(nombreUsuario !== '' && claveUsuario !== ''){
       $('#nombreusuario').text(nombreUsuario);
@@ -91,7 +87,6 @@ function loginSecond(cifradoEnc, clave){
 function login(use_localstorage){
   try{
     if(use_localstorage){
-      console.log("ENTRO"+use_localstorage);
       var nombreusuario = window.localStorage.getItem('nombreUsuario') ? window.localStorage.getItem('nombreUsuario') : '';
       var clave = window.localStorage.getItem('claveUsuario') ? window.localStorage.getItem('claveUsuario') : '';
     }else{
@@ -99,15 +94,13 @@ function login(use_localstorage){
       var clave = $('#password').val();
     }
 
-    console.log("Usuario QUE TOMA: "+nombreusuario);
-    console.log("Clave QUE TOMA: "+clave);
-
     // $('.spinner').removeClass('hidden');
 
     // var usuarioprincipal = window.localStorage.getItem('usuarioprincipal');
     // if(usuarioprincipal !== null && usuarioprincipal !== nombreusuario){
     // 	$('.error').html("ESTE DISPOSITIVO LE PERTENECE A OTRO USUARIO.").fadeIn().fadeOut(2000);
     // }else{
+    $('.spinner').removeClass('hidden');
 
     $.ajax({
       type: 'post',
