@@ -100,7 +100,6 @@ function login(use_localstorage){
     // if(usuarioprincipal !== null && usuarioprincipal !== nombreusuario){
     // 	$('.error').html("ESTE DISPOSITIVO LE PERTENECE A OTRO USUARIO.").fadeIn().fadeOut(2000);
     // }else{
-    $('.spinner').removeClass('hidden');
 
     $.ajax({
       type: 'post',
