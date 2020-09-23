@@ -294,6 +294,7 @@ $('document').ready(function(){
     if(mensajeDecriptado === ""){
       return;
     }
+
     if (usuarioactual !== obj.propietario) {
       let clase = "." + obj.propietario;
       let identificador = "#" + obj.propietario;
@@ -352,9 +353,8 @@ $('document').ready(function(){
       }
     }
     if (obj.tipo === "imagen"){
-      writeToFile('cryptarimg' + getRandomInt(0, 17) + '.jpg', cordova.file.documentsDirectory, "https://"+host+"/"+mensajeDecriptado);
+      // writeToFile('cryptarimg' + getRandomInt(0, 17) + '.jpg', cordova.file.documentsDirectory, "https://"+host+"/"+mensajeDecriptado);
     }
-
 
     try {
       callback('ok');
@@ -456,8 +456,8 @@ $('document').ready(function(){
       $("#tituloapp").css('display', 'none');
       $("#toolbar-navigation").addClass('hidden');
 
-      pictureSource = navigator.camera.PictureSourceType;
-      destinationType = navigator.camera.DestinationType;
+      pictureSource = navigator.camera ? navigator.camera.PictureSourceType : '';
+      destinationType = navigator.camera ? navigator.camera.DestinationType : '';
     }
 
     if (ultimaRed !== navigator.connection.type) {
@@ -535,10 +535,10 @@ $('document').ready(function(){
     myMessages = myApp.messages('.messages', {
       scrollMessagesOnlyOnEdge: true
     });
-
+    let mensajes;
     let msgstr = window.localStorage.getItem(propietario + usuarioactual);
     if (msgstr !== "" && msgstr !== null) {
-      let mensajes = JSON.parse(msgstr);
+      mensajes = JSON.parse(msgstr);
     } else {
       mensajes = null;
     }
@@ -747,11 +747,11 @@ $('document').ready(function(){
   function prepararImagen(imagenDATA) {
     try{
       myApp.showPreloader();
-      console.log(imagenDATA);
-      console.log(host);
+      console.log("LENGTH de la Imagen: " + imagenDATA.length);
+
       setTimeout(function () {
         myApp.hidePreloader();
-      }, 2000);
+      }, 10000);
 
       $.ajax({
         type: 'post',
@@ -760,7 +760,6 @@ $('document').ready(function(){
         success: function ( data ) {
           console.log(data);
           if(data.response !== ''){
-            console.log("IMAGEN ENVIADA: "+ data.response);
             prepararMensaje(data.response, "imagen");
           }
         },

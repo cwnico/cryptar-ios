@@ -1,11 +1,11 @@
-var socket, username, pictureSource, destinationType, myMessages, modeloUUID, myMessagebar, innerH, fechaDesde, fechaHasta, hostnode, host;
-var propietario = "Sin identificar";
-var myApp = new Framework7({
+let socket, username, pictureSource, destinationType, myMessages, modeloUUID, myMessagebar, innerH, fechaDesde, fechaHasta, hostnode, host;
+let propietario = "Sin identificar";
+let myApp = new Framework7({
   pushState: true,
   swipeBackPage: false
 });
 
-var colorUsuario = [
+let colorUsuario = [
   '#fd9e06',
   '#ff4499',
   '#7dd5d5',
@@ -20,11 +20,11 @@ var colorUsuario = [
   '#ce4214'
 ];
 
-var mostrardia = false;
-var tapped = false;
-var ultimaRed = '';
-var FADE_TIME = 150; // ms
-var TYPING_TIMER_LENGTH = 400; // ms
+let mostrardia = false;
+let tapped = false;
+let ultimaRed = '';
+let FADE_TIME = 150; // ms
+let TYPING_TIMER_LENGTH = 400; // ms
 
 if(parameters.production){
   host = window.localStorage.getItem('host');
@@ -38,7 +38,7 @@ if(parameters.production){
 socket = io(hostnode);
 
 // function controldehosts() {
-//   var hostCtrl = window.localStorage.getItem('host');
+//   let hostCtrl = window.localStorage.getItem('host');
 //
 //   if (hostCtrl === null || hostCtrl === false) {
 //     window.localStorage.setItem('host', false);
@@ -47,10 +47,10 @@ socket = io(hostnode);
 // }
 
 function dateFromString(string) {
-  var fechaErronea = string.split(" ")[0];
-  var hora = string.split(" ")[1];
-  var arrFecha = fechaErronea.split("-");
-  var fechaCorrecta = arrFecha[2] + "/" + arrFecha[1] + "/" + arrFecha[0] + " " + hora;
+  let fechaErronea = string.split(" ")[0];
+  let hora = string.split(" ")[1];
+  let arrFecha = fechaErronea.split("-");
+  let fechaCorrecta = arrFecha[2] + "/" + arrFecha[1] + "/" + arrFecha[0] + " " + hora;
   return fechaCorrecta;
 }
 
@@ -58,9 +58,9 @@ function controlFechas(fecha){
   fechaDesde = window.localStorage.getItem('fecha_desde');
   fechaHasta = window.localStorage.getItem('fecha_hasta');
 
-  var dateFrom = new Date(fechaDesde);
-  var dateTo = new Date(fechaHasta);
-  var msgDate = new Date(dateFromString(fecha+":00"));
+  let dateFrom = new Date(fechaDesde);
+  let dateTo = new Date(fechaHasta);
+  let msgDate = new Date(dateFromString(fecha+":00"));
 
   if (dateFrom === 'undefined' || dateTo === 'undefined' || dateFrom > msgDate || msgDate > dateTo) {
     return true;
@@ -69,21 +69,21 @@ function controlFechas(fecha){
   return false;
 }
 
-var $$ = Dom7;
-var usuarioactual = "";
+let $$ = Dom7;
+let usuarioactual = "";
 $('document').ready(function(){
-  var usuarios = JSON.parse(window.localStorage.getItem('usuarios'));
-  // var items = [];
-  for (var i = 0; i < usuarios.length; i++) {
+  let usuarios = JSON.parse(window.localStorage.getItem('usuarios'));
+  // let items = [];
+  for (let i = 0; i < usuarios.length; i++) {
     $$("#usuarios").append('<li id="' + usuarios[i].username + '">' +
-      '<a href="messages.html?mac=' + usuarios[i].username + '&apellidonombre=' + usuarios[i].apellidonombre + '" class="item-link item-content">' +
-      '<div class="item-media"><div class="circle-icon" style="background: '+colorUsuario[i]+'">'+usuarios[i].apellidonombre.charAt(0)+'</div></div>' +
-      '<div class="item-inner"><div class="item-title">' + usuarios[i].apellidonombre + '</div>' +
-      '<div class="item-after ' + usuarios[i].username + '" style="margin-top: -4px;display: none;">' +
-      '<span class="badge"></span></div>' +
-      '</div>' +
-      '</a>' +
-      '</li>');
+        '<a href="messages.html?mac=' + usuarios[i].username + '&apellidonombre=' + usuarios[i].apellidonombre + '" class="item-link item-content">' +
+        '<div class="item-media"><div class="circle-icon" style="background: '+colorUsuario[i]+'">'+usuarios[i].apellidonombre.charAt(0)+'</div></div>' +
+        '<div class="item-inner"><div class="item-title">' + usuarios[i].apellidonombre + '</div>' +
+        '<div class="item-after ' + usuarios[i].username + '" style="margin-top: -4px;display: none;">' +
+        '<span class="badge"></span></div>' +
+        '</div>' +
+        '</a>' +
+        '</li>');
   }
   try{
     if(window.Keyboard){
@@ -97,7 +97,7 @@ $('document').ready(function(){
   }
   $('.spinner').addClass('hidden');
 
-  var isLogged = window.localStorage.getItem('isLogged');
+  let isLogged = window.localStorage.getItem('isLogged');
   if (isLogged === 'undefined' || isLogged === false || isLogged === null) {
     window.location.href = "./index.html";
   } else {
@@ -123,16 +123,16 @@ $('document').ready(function(){
   propietario = window.localStorage.getItem('nombreUsuario');
   setUsername(propietario);
 
-  var typing = false;
-  var lastTypingTime;
+  let typing = false;
+  let lastTypingTime;
 
   function date() {
-    var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth() + 1; //January is 0!
-    var yyyy = today.getFullYear();
-    var hours = today.getHours();
-    var min = today.getMinutes();
+    let today = new Date();
+    let dd = today.getDate();
+    let mm = today.getMonth() + 1; //January is 0!
+    let yyyy = today.getFullYear();
+    let hours = today.getHours();
+    let min = today.getMinutes();
     if (dd < 10) {
       dd = '0' + dd;
     }
@@ -157,14 +157,14 @@ $('document').ready(function(){
       window.localStorage.setItem("colasalida", JSON.stringify(colasalida));
       $.each(colatemp, function(index, value) {
         if (value !== null) {
-          sendMessage(value.message, value.propietario, value.destinatario, value.iv, value.idMessage, value.tipo);
+          sendMessage(value.message, value.propietario, value.destinatario, value.iv, value.iv2, value.idMessage, value.tipo);
         }
       });
     }
   }
 
-  function sendMessage(mensaje, propietario, destinatario, iv, idMessage, tipo) {
-    var message = mensaje;
+  function sendMessage(mensaje, propietario, destinatario, iv, iv2, idMessage, tipo) {
+    let message = mensaje;
     propietario = window.localStorage.getItem('nombreUsuario');
     if (message && socket.connected) {
       let datosenvio = {
@@ -177,7 +177,7 @@ $('document').ready(function(){
         destinatario: destinatario,
         idMessage: idMessage,
         iv: iv,
-        iv2: iv,
+        iv2: iv2
       };
 
       // TODO: Reenviar mensajes en cola de espera. Aca solo se guardan.
@@ -194,7 +194,7 @@ $('document').ready(function(){
 
       try {
         socket.emit('new message', JSON.stringify(datosenvio), function(response) {
-          var user = $('.messages > div:last-child > .message-name').html();
+          let user = $('.messages > div:last-child > .message-name').html();
           let objResponse = JSON.parse(response);
           if (objResponse.estado === "ok" && user === propietario) {
             $('.message-sent:last-child  > .message-label').html(objResponse.mensaje);
@@ -215,7 +215,7 @@ $('document').ready(function(){
     if (typeof date === 'undefined') {
       return false;
     }
-    var month = new Array();
+    let month = new Array();
     month['01'] = "Ene";
     month['02'] = "Feb";
     month['03'] = "Mar";
@@ -235,7 +235,7 @@ $('document').ready(function(){
     if (typeof str === 'undefined' || str === null) {
       return '';
     }
-    var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
+    let breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
     return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
   }
 
@@ -280,30 +280,31 @@ $('document').ready(function(){
       return;
     }
 
-    if (obj.tipo === 'texto') {
-      if (usuarioactual !== "") {
-        let clase = "." + usuarioactual;
-        $(clase).css('display', 'none');
-      }
-      propietario = window.localStorage.getItem('nombreUsuario');
-      let objetoClaves = {
-        key: window.localStorage.getItem("key"),
-        keyBF: window.localStorage.getItem("keyBF"),
-        iv: obj.iv
-      };
-      let mensajeDecriptado = deCryptar(obj.message, objetoClaves);
-      if(mensajeDecriptado === ""){
-        return;
-      }
-      if (usuarioactual !== obj.propietario) {
-        let clase = "." + obj.propietario;
-        let identificador = "#" + obj.propietario;
-        $("#usuarios li:eq(0)").before($( identificador ));
+    if (usuarioactual !== "") {
+      let clase = "." + usuarioactual;
+      $(clase).css('display', 'none');
+    }
+    propietario = window.localStorage.getItem('nombreUsuario');
+    let objetoClaves = {
+      key: window.localStorage.getItem("key"),
+      keyBF: window.localStorage.getItem("keyBF"),
+      iv: obj.iv
+    };
+    let mensajeDecriptado = deCryptar(obj.message, objetoClaves);
+    if(mensajeDecriptado === ""){
+      return;
+    }
 
-        let  msjs = $(clase+" .badge").html() === '' ? 1 : parseInt($(clase+" .badge").html()) + 1;
-        $(clase+" .badge").html(msjs);
-        $(clase).css('display', 'block');
+    if (usuarioactual !== obj.propietario) {
+      let clase = "." + obj.propietario;
+      let identificador = "#" + obj.propietario;
+      $("#usuarios li:eq(0)").before($( identificador ));
 
+      let  msjs = $(clase+" .badge").html() === '' ? 1 : parseInt($(clase+" .badge").html()) + 1;
+      $(clase+" .badge").html(msjs);
+      $(clase).css('display', 'block');
+
+      if(obj.tipo === 'texto'){
         myApp.addNotification({
           title: obj.propietario,
           message: mensajeDecriptado,
@@ -313,46 +314,46 @@ $('document').ready(function(){
           }
         });
       }
+    }
 
-      let conversacionactual;
-      let mensajesjson = window.localStorage.getItem(propietario + obj.propietario);
-      if (mensajesjson !== "" && mensajesjson !== null) {
-        conversacionactual = JSON.parse(mensajesjson);
-      } else {
-        conversacionactual = null;
-      }
-      let mensajeobj = {
-        'propietario': obj.propietario,
-        'fecha': obj.fecha,
-        'mensaje': obj.message,
-        'tipo': obj.tipo,
-        'iv': obj.iv,
-        'iv2': obj.iv2,
-        'idMessage': obj.idMessage,
-        'registrationId': obj.registrationId
-      };
-      if (conversacionactual === null) {
-        let mensajes = [mensajeobj];
-        window.localStorage.setItem(propietario + obj.propietario, JSON.stringify(mensajes));
-      } else {
-        conversacionactual.push(mensajeobj);
-        window.localStorage.setItem(propietario + obj.propietario, JSON.stringify(conversacionactual));
-      }
+    let conversacionactual;
+    let mensajesjson = window.localStorage.getItem(propietario + obj.propietario);
+    if (mensajesjson !== "" && mensajesjson !== null) {
+      conversacionactual = JSON.parse(mensajesjson);
+    } else {
+      conversacionactual = null;
+    }
+    let mensajeobj = {
+      'propietario': obj.propietario,
+      'fecha': obj.fecha,
+      'mensaje': obj.message,
+      'tipo': obj.tipo,
+      'iv': obj.iv,
+      'iv2': obj.iv2,
+      'idMessage': obj.idMessage,
+      'registrationId': obj.registrationId
+    };
+    if (conversacionactual === null) {
+      let mensajes = [mensajeobj];
+      window.localStorage.setItem(propietario + obj.propietario, JSON.stringify(mensajes));
+    } else {
+      conversacionactual.push(mensajeobj);
+      window.localStorage.setItem(propietario + obj.propietario, JSON.stringify(conversacionactual));
+    }
 
 
-      if (usuarioactual === obj.propietario) {
-        if($("#" + obj.idMessage).length == 0) {
-          if (obj.tipo === "imagen"){
-            addMessageImage(mensajeDecriptado, obj.propietario, 'received', mensajeobj.fecha);
-          }else{
-            addMessage(mensajeDecriptado, obj.propietario, 'received', mensajeobj.fecha);
-          }
-          $('.message-received:last-child').attr('id', obj.idMessage);
+    if (usuarioactual === obj.propietario) {
+      if($("#" + obj.idMessage).length == 0) {
+        if (obj.tipo === "imagen"){
+          addMessageImage(mensajeDecriptado, obj.propietario, 'received', mensajeobj.fecha);
+        }else{
+          addMessage(mensajeDecriptado, obj.propietario, 'received', mensajeobj.fecha);
         }
+        $('.message-received:last-child').attr('id', obj.idMessage);
       }
-      if (obj.tipo === "imagen"){
-        writeToFile('cryptarimg' + getRandomInt(0, 17) + '.jpg', cordova.file.documentsDirectory, mensajeDecriptado);
-      }
+    }
+    if (obj.tipo === "imagen"){
+      // writeToFile('cryptarimg' + getRandomInt(0, 17) + '.jpg', cordova.file.documentsDirectory, "https://"+host+"/"+mensajeDecriptado);
     }
 
     try {
@@ -361,6 +362,7 @@ $('document').ready(function(){
       console.log(err.message);
     }
   });
+
   socket.on('connect_timeout', function(timeout) {
     // Murio por timeout
   });
@@ -402,14 +404,14 @@ $('document').ready(function(){
   socket.on('reconnect_error', function() {
     // connected = false;
   });
-  // Add view
-  var mainView = myApp.addView('.view-main', {
+// Add view
+  let mainView = myApp.addView('.view-main', {
     // Because we want to use dynamic navbar, we need to enable it for this view:
     dynamicNavbar: true,
     cache: false
   });
 
-  // Updates the typing event
+// Updates the typing event
   function updateTyping() {
     if (socket.connected) {
       if (!typing) {
@@ -418,8 +420,8 @@ $('document').ready(function(){
       }
       lastTypingTime = (new Date()).getTime();
       setTimeout(function() {
-        var typingTimer = (new Date()).getTime();
-        var timeDiff = typingTimer - lastTypingTime;
+        let typingTimer = (new Date()).getTime();
+        let timeDiff = typingTimer - lastTypingTime;
         if (timeDiff >= TYPING_TIMER_LENGTH && typing) {
           socket.emit('stop typing', usuarioactual);
           typing = false;
@@ -437,7 +439,7 @@ $('document').ready(function(){
 
   $$(document).on('pageInit', function(e) {
     $("#toolbar-navigation").removeClass('hidden');
-    var page = e.detail.page;
+    let page = e.detail.page;
     $("#tituloapp").css('display', 'inline-block');
     if (page.name === 'about') {
       $('#toolbarindex').show();
@@ -454,8 +456,8 @@ $('document').ready(function(){
       $("#tituloapp").css('display', 'none');
       $("#toolbar-navigation").addClass('hidden');
 
-      pictureSource = navigator.camera.PictureSourceType;
-      destinationType = navigator.camera.DestinationType;
+      pictureSource = navigator.camera ? navigator.camera.PictureSourceType : '';
+      destinationType = navigator.camera ? navigator.camera.DestinationType : '';
     }
 
     if (ultimaRed !== navigator.connection.type) {
@@ -464,7 +466,7 @@ $('document').ready(function(){
     enviarcola();
   });
 
-  // TRATAMIENTO DE LAS IMAGENES
+// TRATAMIENTO DE LAS IMAGENES
 
   $("#botoncamara").click(function() {
     $('.popover').hide();
@@ -475,7 +477,7 @@ $('document').ready(function(){
     getPhoto(pictureSource.PHOTOLIBRARY);
   });
 
-  // CAPTURA IMAGEN DESDE LA CAMARA
+// CAPTURA IMAGEN DESDE LA CAMARA
   function hacerFoto() {
     navigator.camera.getPicture(onSuccess, onFail, {
       quality: 20,
@@ -484,7 +486,7 @@ $('document').ready(function(){
     });
   }
 
-  // CAPTURA IMAGEN DESDE LA GALERIA
+// CAPTURA IMAGEN DESDE LA GALERIA
   function getPhoto(source) {
     navigator.camera.getPicture(onSuccess, onFail, {
       quality: 20,
@@ -533,10 +535,10 @@ $('document').ready(function(){
     myMessages = myApp.messages('.messages', {
       scrollMessagesOnlyOnEdge: true
     });
-
+    let mensajes;
     let msgstr = window.localStorage.getItem(propietario + usuarioactual);
     if (msgstr !== "" && msgstr !== null) {
-      var mensajes = JSON.parse(msgstr);
+      mensajes = JSON.parse(msgstr);
     } else {
       mensajes = null;
     }
@@ -547,7 +549,7 @@ $('document').ready(function(){
       recorrido(mensajes, false);
     }
 
-    var isFocused;
+    let isFocused;
     myMessagebar = myApp.messagebar('.messagebar');
 
     $$('textarea').keyup(function(e) {
@@ -564,7 +566,7 @@ $('document').ready(function(){
     });
 
     $$('.messagebar a.send-message').on('click', function(e) {
-      var messageText = myMessagebar.value();
+      let messageText = myMessagebar.value();
       if (messageText.length === 0) {
         return;
       }
@@ -597,19 +599,19 @@ $('document').ready(function(){
         if(controlFechas(field.fecha) === true){
           return;
         }
-        var propietariomsj = field.propietario;
+        let propietariomsj = field.propietario;
         let objetoClaves = {
           key: window.localStorage.getItem("key"),
           keyBF: window.localStorage.getItem("keyBF"),
           iv: field.iv
         };
-        var mensaje = deCryptar(field.mensaje, objetoClaves);
+        let mensaje = deCryptar(field.mensaje, objetoClaves);
 
         if(mensaje === ""){
           return;
         }
 
-        var type;
+        let type;
 
         if (propietario === propietariomsj) {
           type = 'sent';
@@ -644,19 +646,19 @@ $('document').ready(function(){
 
   function cryptar(mensaje, objClaves) {
     // First ENC
-    var textBytes = aesjs.utils.utf8.toBytes(encodeURI(mensaje));
-    var key = JSON.parse(objClaves.key);
-    var iv = JSON.parse(objClaves.iv);
+    let textBytes = aesjs.utils.utf8.toBytes(encodeURI(mensaje));
+    let key = JSON.parse(objClaves.key);
+    let iv = JSON.parse(objClaves.iv);
 
-    var aesOfb = new aesjs.ModeOfOperation.ofb(key, iv);
-    var encryptedBytes = aesOfb.encrypt(textBytes);
-    var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
+    let aesOfb = new aesjs.ModeOfOperation.ofb(key, iv);
+    let encryptedBytes = aesOfb.encrypt(textBytes);
+    let encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
 
     // Second ENC
-    var cryptTF = twofish(iv);
-    var keyTF = cryptTF.stringToByteArray(objClaves.keyBF);
-    var textByteArray = cryptTF.stringToByteArray(encryptedHex);
-    var encyptedMessage = cryptTF.encryptCBC(keyTF, textByteArray);
+    let cryptTF = twofish(iv);
+    let keyTF = cryptTF.stringToByteArray(objClaves.keyBF);
+    let textByteArray = cryptTF.stringToByteArray(encryptedHex);
+    let encyptedMessage = cryptTF.encryptCBC(keyTF, textByteArray);
     encyptedMessage = JSON.stringify(encyptedMessage);
 
     return encyptedMessage;
@@ -664,21 +666,21 @@ $('document').ready(function(){
 
   function deCryptar(text, objClaves) {
     try {
-      var key = JSON.parse(objClaves.key);
-      var iv = JSON.parse(objClaves.iv);
+      let key = JSON.parse(objClaves.key);
+      let iv = JSON.parse(objClaves.iv);
 
       // First DEC
-      var cryptTF = twofish(iv);
-      var keyTF = cryptTF.stringToByteArray(objClaves.keyBF);
-      var cpt = cryptTF.decryptCBC(keyTF, JSON.parse(text));
-      var encryptedHex = cryptTF.byteArrayToString(cpt);
+      let cryptTF = twofish(iv);
+      let keyTF = cryptTF.stringToByteArray(objClaves.keyBF);
+      let cpt = cryptTF.decryptCBC(keyTF, JSON.parse(text));
+      let encryptedHex = cryptTF.byteArrayToString(cpt);
 
       // Second DEC
-      var encryptedHex = encryptedHex.replace(/\0+$/g, "");
-      var encryptedBytes = aesjs.utils.hex.toBytes(encryptedHex);
-      var aesOfb = new aesjs.ModeOfOperation.ofb(key, iv);
-      var decryptedBytes = aesOfb.decrypt(encryptedBytes);
-      var decryptedText = aesjs.utils.utf8.fromBytes(decryptedBytes);
+      encryptedHex = encryptedHex.replace(/\0+$/g, "");
+      let encryptedBytes = aesjs.utils.hex.toBytes(encryptedHex);
+      let aesOfb = new aesjs.ModeOfOperation.ofb(key, iv);
+      let decryptedBytes = aesOfb.decrypt(encryptedBytes);
+      let decryptedText = aesjs.utils.utf8.fromBytes(decryptedBytes);
 
       return decodeURI(decryptedText);
     }catch (e) {
@@ -687,7 +689,7 @@ $('document').ready(function(){
   }
 
   function prepararMensaje(messageText, tipomensaje) {
-    var now = new Date();
+    let now = new Date();
     let idMessage = now.getTime();
 
     let conversacionactual;
@@ -728,7 +730,7 @@ $('document').ready(function(){
       window.localStorage.setItem(propietario + usuarioactual, JSON.stringify(conversacionactual));
     }
 
-    sendMessage(mensajeEncriptado, propietario, usuarioactual, iv, idMessage, tipomensaje);
+    sendMessage(mensajeEncriptado, propietario, usuarioactual, iv, iv2, idMessage, tipomensaje);
 
     // $('.message-sent:last-child').attr('id', idMessage).append('<div class="message-label"><i class="fa fa-clock-o"></i></div>');
 
@@ -745,11 +747,11 @@ $('document').ready(function(){
   function prepararImagen(imagenDATA) {
     try{
       myApp.showPreloader();
-      console.log(imagenDATA);
-      console.log(host);
+      console.log("LENGTH de la Imagen: " + imagenDATA.length);
+
       setTimeout(function () {
         myApp.hidePreloader();
-      }, 2000);
+      }, 10000);
 
       $.ajax({
         type: 'post',
@@ -758,7 +760,6 @@ $('document').ready(function(){
         success: function ( data ) {
           console.log(data);
           if(data.response !== ''){
-            console.log("IMAGEN ENVIADA: "+ data.response);
             prepararMensaje(data.response, "imagen");
           }
         },
@@ -776,7 +777,7 @@ $('document').ready(function(){
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
-  // Tratamiento de IMAGENES
+// Tratamiento de IMAGENES
   function writeToFile(fileName, storageLocation, data) {
     window.resolveLocalFileSystemURL(storageLocation, function(directoryEntry) {
       directoryEntry.getFile(fileName, {
@@ -792,8 +793,8 @@ $('document').ready(function(){
           };
           contentType = 'image/jpeg';
           // contentType = '';
-          var DataBlob = b64toBlob(data, contentType);
-          //					var blob = new Blob([data], { type: 'image/jpeg' });
+          let DataBlob = b64toBlob(data, contentType);
+          //					let blob = new Blob([data], { type: 'image/jpeg' });
           fileWriter.write(DataBlob);
         }, errorHandler.bind(null, fileName));
       }, errorHandler.bind(null, fileName));
@@ -804,30 +805,30 @@ $('document').ready(function(){
     contentType = contentType || '';
     sliceSize = sliceSize || 512;
 
-    var byteCharacters = window.atob(b64Data);
-    var byteArrays = [];
+    let byteCharacters = window.atob(b64Data);
+    let byteArrays = [];
 
-    for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
-      var slice = byteCharacters.slice(offset, offset + sliceSize);
+    for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+      let slice = byteCharacters.slice(offset, offset + sliceSize);
 
-      var byteNumbers = new Array(slice.length);
-      for (var i = 0; i < slice.length; i++) {
+      let byteNumbers = new Array(slice.length);
+      for (let i = 0; i < slice.length; i++) {
         byteNumbers[i] = slice.charCodeAt(i);
       }
 
-      var byteArray = new Uint8Array(byteNumbers);
+      let byteArray = new Uint8Array(byteNumbers);
 
       byteArrays.push(byteArray);
     }
 
-    var blob = new Blob(byteArrays, {
+    let blob = new Blob(byteArrays, {
       type: contentType
     });
     return blob;
   }
 
-  var errorHandler = function(fileName, e) {
-    var msg = '';
+  let errorHandler = function(fileName, e) {
+    let msg = '';
     switch (e.code) {
       case FileError.QUOTA_EXCEEDED_ERR:
         msg = 'Storage quota exceeded';
@@ -884,7 +885,7 @@ function salir() {
   window.localStorage.setItem('isLogged', false);
   let usuarios = JSON.parse(window.localStorage.getItem('usuarios'));
 
-  for (var i = 0; i < usuarios.length; i++) {
+  for (let i = 0; i < usuarios.length; i++) {
     window.localStorage.setItem(window.localStorage.getItem('nombreUsuario') + usuarios[i].username, "");
   }
 
