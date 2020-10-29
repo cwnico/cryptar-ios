@@ -84,6 +84,25 @@ function loginSecond(cifradoEnc, clave){
   });
 }
 
+function forget(){
+  if($('#nombreusuario').val()===''){
+    $('.error').html('Completa el nombre de usuario para recuperar tu contraseña.').fadeIn().fadeOut(3000);
+  }else{
+    $.ajax({
+      type: 'get',
+      url: host + "/forget",
+      data: {user: $('#nombreusuario').val()},
+      success: function (data) {
+        if(data.status){
+          $('.success').html('Enviamos un correo a tu casilla para que puedas continuar con el proceso de recuparación de clave.').fadeIn().fadeOut(3000);
+        }else{
+          $('.error').html(data.message).fadeIn().fadeOut(3000);
+        }
+      }
+    });
+  }
+}
+
 function login(use_localstorage){
   try{
     if(use_localstorage){
