@@ -90,8 +90,7 @@ function forget(){
   }else{
     $.ajax({
       type: 'get',
-      url: host + "/forget",
-      data: {user: $('#nombreusuario').val()},
+      url: host + "/forget?user="+$('#nombreusuario').val(),
       success: function (data) {
         if(data.status){
           $('.success').html('Enviamos un correo a tu casilla para que puedas continuar con el proceso de recuparación de clave.').fadeIn().fadeOut(3000);
